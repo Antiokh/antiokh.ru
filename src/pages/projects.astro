@@ -1,15 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const cases = [
-  { id:'andronyevskaya', n:'01', title:'Andronyevskaya ERP', type:'Property operations', role:'Developer · DevOps · PM', image:'/projects/andronyevskaya.png', text:'Self-hosted ERP для технической эксплуатации недвижимости: QR-доступ к оборудованию, задания, три ролевых контура, Telegram Mini App и realtime-коммуникация.', facts:['WeWeb + Supabase','Telegram auth и уведомления','Self-hosted Edge Functions'] },
-  { id:'mosrazvitie', n:'02', title:'AIS MosRazvitie', type:'GovTech · reporting', role:'Owner · Architect · Builder', image:'/projects/mosrazvitie.png', text:'Центральная операционная и отчётная система для дирекции и сети из 100+ учреждений. От модели данных и безопасности до обучения пользователей и эксплуатации.', facts:['100+ учреждений','Отчётность и модерация','IBM Domino / XPages'] },
-  { id:'promptlesspress', n:'03', title:'PromptlessPress', type:'AI product platform', role:'Architect · AI workflow designer', image:'/projects/promptlesspress.png', text:'Платформа генерации готовых цифровых продуктов с воспроизводимым состоянием, итеративной AI-генерацией, mockup-конвейером и инженерными guardrails.', facts:['OpenAI + fal.ai','SQL-driven composition','AI-agent guardrails'] },
-  { id:'metafox', n:'04', title:'MetaFox Strengths Explorer', type:'Assessment platform', role:'Product owner · Builder', image:'/projects/metafox.png', text:'Перевёл развивающуюся психометрическую методику в устойчивый цифровой продукт со scoring logic, peer feedback и визуальными PDF-отчётами.', facts:['64 вопроса','Нормализация результатов','WeWeb + Xano'] },
-  { id:'exit-lead', n:'05', title:'Exit Lead', type:'Field operations', role:'Builder · Architect · Designer', image:'/projects/exitlead.png', text:'Две связанные поверхности для инспекторов и клиентов, автоматические PDF-отчёты, импорт данных измерительных приборов и миграция около 70 000 документов.', facts:['Glide + WeWeb','Supabase + n8n','≈70 000 отчётов'] }
+  {
+    id: 'mosrazvitie', n: '01', title: 'AIS MosRazvitie', type: 'GovTech · отраслевой legacy', role: 'Архитектор · аналитик · разработчик · внедрение', image: '/projects/mosrazvitie.png',
+    text: 'Действующая IBM Domino-система для дирекции и сети из 100+ учреждений. Я работал с ней не как с разовым редизайном: разбирал терминологию и модель данных, права, отчётность, безопасность, обучение пользователей, серверы и ежедневную эксплуатацию.',
+    facts: ['100+ учреждений', 'Отчётность, модерация и внешние обмены', 'IBM Domino / XPages / JavaScript / XML']
+  },
+  {
+    id: 'andronyevskaya', n: '02', title: 'Andronyevskaya ERP', type: 'Property operations · self-hosted', role: 'Developer · DevOps · Project Manager', image: '/projects/andronyevskaya.png',
+    text: 'ERP для технической эксплуатации недвижимости, где цифровой процесс начинается с физического оборудования. Исполнитель сканирует QR, открывает карточку и задачу, общается с менеджером и закрывает работу; администратор управляет объектами, ролями и доступом.',
+    facts: ['WeWeb + Supabase', 'Telegram Mini App и Bot API', 'Self-hosted backend и Edge Functions']
+  },
+  {
+    id: 'exit-lead', n: '03', title: 'Exit Lead', type: 'Field inspections · documents', role: 'Builder · Architect · Designer', image: '/projects/exitlead.png',
+    text: 'Полевая система для инспекторов и клиентский портал на одном backend. Внутри — маршруты, формы, фотографии, данные измерительных приборов, автоматические PDF и отдельная миграция примерно 70 000 исторических отчётов из Google Drive в Supabase.',
+    facts: ['Glide + WeWeb', 'Supabase + n8n + DocsAutomator', '≈70 000 исторических отчётов']
+  },
+  {
+    id: 'metafox', n: '04', title: 'MetaFox Strengths Explorer', type: 'Assessment · evolving methodology', role: 'Product Owner · Full-stack Builder', image: '/projects/metafox.png',
+    text: 'Методика менялась во время разработки: число вопросов выросло, появились peer feedback и дополнительные правила интерпретации. Я переводил эту логику в продукт со стабильным скорингом, нормализацией, админкой и визуальными PDF-отчётами.',
+    facts: ['64 вопроса', 'Peer feedback и детерминированный scoring', 'WeWeb + Xano']
+  },
+  {
+    id: 'promptlesspress', n: '05', title: 'PromptlessPress', type: 'AI product · probabilistic workflows', role: 'Builder · Architect · AI Workflow Designer', image: '/projects/promptlesspress.png',
+    text: 'Платформа для генерации готовых цифровых продуктов с AI. Главная инженерная задача здесь — не «подключить модель», а сделать недетерминированный процесс управляемым: хранить состояние генерации, поддерживать итерации, разносить intent, execution и assets, а критичную SQL-логику держать проверяемой в git.',
+    facts: ['Supabase + WeWeb', 'OpenAI + fal.ai', 'Structured prompts, debug flow и agent guardrails']
+  }
+];
+const archive = [
+  'Dobri Visarun — автоматизация визаранов и клиентского потока',
+  'Dobri Tours — экскурсии, запись и повторные продажи',
+  'Educate Online — корпоративная система assessment',
+  'Vencer Autismo — assessment и рекомендации для семей и специалистов',
+  'QR Cloud — цифровые визитки и динамические QR-профили',
+  'Cashdesk — внутренний финансовый учёт',
+  'French Plumbers ERP — выездные работы и диспетчеризация',
+  'RuskaJela — локальный marketplace домашней еды',
+  'Serbia Networking — приложение для офлайн-нетворкинга',
+  'Sefcast — интерфейс SEO-аналитики',
+  'MommyHana MBO — клиентский и операционный кабинет',
+  'Business Directory — мобильный каталог организаций',
+  'Space AI — интерактивный AI-прототип',
+  'tgs.py — инструменты работы с Telegram-данными',
+  'MakeMeLook — визуальный продуктовый сервис',
+  'Flower Shop — CRM и клиентский workflow'
 ];
 ---
-<BaseLayout title="Проекты Антона Назарова — архитектура, продукты, автоматизация" description="Кейсы Антона Назарова: ERP, GovTech, AI-продукты, assessment и field operations. Роли, архитектура, решения и измеримый результат." path="/projects/">
-  <section class="page-hero wrap"><span class="section-label">Портфолио / 01—05</span><h1>Сложность —<br /><em>мой рабочий материал.</em></h1><p>От отраслевых систем и legacy до AI-продуктов. Здесь важны не красивые экраны сами по себе, а контекст, архитектура и внедрение.</p></section>
-  <section class="case-list wrap">{cases.map((item) => <article class="case" id={item.id}><div class="case-top"><span>{item.n}</span><span>{item.type}</span><span>{item.role}</span></div><div class="case-body"><div><h2>{item.title}</h2><p>{item.text}</p><ul>{item.facts.map(f => <li>{f}</li>)}</ul></div><img src={item.image} alt={`Скриншот ${item.title}`} loading="lazy" /></div></article>)}</section>
-  <section class="archive wrap"><span class="section-label">Архив / ещё 16 проектов</span><h2>Остальная работа —<br />не менее настоящая.</h2><div class="archive-grid">{['Dobri Tours — приложения для экскурсий и визаранов','Educate Online — корпоративная система тестирования','Vencer Autismo — assessment для семей и специалистов','PromptlessPress — AI-генерация цифровых товаров','QR Cloud — управление динамическими QR-кодами','Cashdesk — внутренний финансовый учёт','French Plumbers ERP — выездные работы и диспетчеризация','RuskaJela — каталог и доставка локальных продуктов','Serbia Networking — профессиональное сообщество','Sefcast — SEO goal builder','MommyHana MBO — личный кабинет и операционная панель','Business Directory — мобильный каталог организаций','Space AI — интерактивный AI-прототип','tgs.py — Telegram data toolkit','MakeMeLook — визуальный продуктовый сервис','Flower Shop — CRM и клиентский workflow'].map((name,i)=><article><span>{String(i+6).padStart(2,'0')}</span><h3>{name}</h3></article>)}</div></section>
+<BaseLayout
+  title="Проекты Антона Назарова — системы, продукты и внедрение"
+  description="Выбранные проекты Антона Назарова: GovTech, ERP, field operations, assessment и AI. Контекст, личная роль, архитектурные решения и рабочий результат."
+  path="/projects/"
+>
+  <section class="page-hero wrap">
+    <span class="section-label">Проекты / не витрина технологий</span>
+    <h1>Пять систем.<br />Пять разных причин <em>их строить.</em></h1>
+    <p>Мне не очень полезно показывать двадцать логотипов технологий. Ниже — несколько проектов, где видны исходная ситуация, моя зона ответственности и инженерные решения. Полный архив шире и местами гораздо менее прилизан.</p>
+  </section>
+
+  <section class="case-list wrap">
+    {cases.map(item =>
+      <article class="case" id={item.id}>
+        <div class="case-top"><span>{item.n}</span><span>{item.type}</span><span>{item.role}</span></div>
+        <div class="case-body">
+          <div><h2>{item.title}</h2><p>{item.text}</p><ul>{item.facts.map(f => <li>{f}</li>)}</ul></div>
+          <img src={item.image} alt={`Интерфейс проекта ${item.title}`} loading="lazy" />
+        </div>
+      </article>
+    )}
+  </section>
+
+  <section class="archive wrap">
+    <span class="section-label">Архив / ещё 16 проектов</span>
+    <h2>Остальное — от удачных бизнес-продуктов<br />до полезных экспериментов.</h2>
+    <div class="archive-grid">
+      {archive.map((name, i) => <article><span>{String(i + 6).padStart(2, '0')}</span><h3>{name}</h3></article>)}
+    </div>
+  </section>
 </BaseLayout>
