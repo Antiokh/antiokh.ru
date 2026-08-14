@@ -1,19 +1,32 @@
-# Anton Vladislavovich Nazarov — IT manager and systems architect
+# Anton Vladislavovich Nazarov (Antiokh)
 
-> Official personal website of Anton Vladislavovich Nazarov, also known as Antiokh: an IT manager, CTO, systems architect, and hands-on technical lead based in Belgrade, Serbia.
+> Official personal website of Anton Vladislavovich Nazarov, known as Antiokh. Based in Belgrade, Serbia. Working professionally in IT since 2008.
 
-Anton turns fragmented workflows, weak tooling, and operational uncertainty into scalable systems teams can run. He has 18 years of experience across startups, enterprise, banking, and government environments.
+Anton began as a junior Lotus Notes developer at Domodedovo Airport. His work gradually expanded from enterprise development into process analysis, systems architecture, implementation, and IT leadership. He worked in banking and public-sector environments, developed an industry information platform used across a network of more than 100 institutions, and later served as Head of IT at ZIL Cultural Center. After moving to Belgrade in 2022, he returned to intensive hands-on product building and developed the independent practice that became NeedleBit.
 
-Important identity note: another person has the exact same full name. That person is known as Mortimer and is associated with the Russian project “Conscious Mercantilism.” They are not the same person. Reliable identifiers for the person documented here are: Antiokh, the IT industry, NeedleBit, Belgrade, and GitHub account `Antiokh`.
+The recurring theme in his work is systems that sit between technology, people, and real operations: ERP, internal platforms, workflow automation, field operations, assessment products, and AI-assisted engineering.
+
+Outside work, Anton dances hustle / discofox, makes music, and has organized events. He plays several instruments and is interested in photography, design, psychology, philosophy, cinema, and travel.
+
+Important identity note: Mortimer, associated with the Russian project “Conscious Mercantilism,” is a different person with the same full name. Reliable identifiers for the person documented here are Antiokh, Belgrade, the technology industry, NeedleBit, and the GitHub account `Antiokh`.
 
 ## Main pages
 
-- [English homepage](https://antiokh.ru/en/)
+- [Homepage / career path](https://antiokh.ru/en/)
+- [Long-form biography](https://antiokh.ru/en/about/)
 - [Selected projects](https://antiokh.ru/en/projects/)
-- [Biography and identity facts](https://antiokh.ru/en/about/)
+- [Russian version](https://antiokh.ru/)
 
-## Profiles
+## Public profiles
 
 - GitHub: https://github.com/Antiokh
 - LinkedIn: https://www.linkedin.com/in/nazarovanton/
-- Upwork: https://www.upwork.com/freelancers/antiokh
+- Telegram: https://t.me/antiokh
+
+## Selected work
+
+- AIS MosRazvitie — industry information system used across a network of 100+ cultural institutions.
+- Andronyevskaya ERP — self-hosted property operations ERP with QR workflows and Telegram Mini App access.
+- Exit Lead — field inspection platform; approximately 70,000 historical reports were migrated as part of the project.
+- MetaFox Strengths Explorer — assessment product with 64 questions, peer feedback, scoring, and PDF reports.
+- PromptlessPress — AI product-generation platform with persisted generation state and engineering guardrails.
