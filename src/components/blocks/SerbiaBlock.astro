@@ -1,0 +1,6 @@
+---
+import type { HomeContent } from '../../data/home';
+const { content } = Astro.props as { content: HomeContent };
+const s = content.serbia;
+---
+<section id="serbia" class="serbia-block"><div class="wrap"><div class="serbia-intro"><span class="section-label">{s.label}</span><h2>{s.title}</h2><div><p class="story-lead">{s.lead}</p><p>{s.text}</p></div></div><div class="serbia-projects">{s.projects.map((project,i)=><article><div class="serbia-image"><img src={project.image} alt={`${project.title} interface`} loading="lazy" /><span>{String(i+1).padStart(2,'0')}</span></div><div><h3>{project.title}</h3><p>{project.text}</p><strong>{project.result}</strong></div></article>)}</div></div></section>
