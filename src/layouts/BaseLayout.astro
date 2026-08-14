@@ -12,6 +12,8 @@ const { title, description, path = '/', lang = 'ru' } = Astro.props;
 const canonical = new URL(path, Astro.site);
 const ruPath = lang === 'ru' ? path : path.replace(/^\/en(?=\/|$)/, '') || '/';
 const enPath = lang === 'en' ? path : path === '/' ? '/en/' : `/en${path}`;
+const homePath = lang === 'ru' ? '/' : '/en/';
+const aboutPath = lang === 'ru' ? '/about/' : '/en/about/';
 const schema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -22,23 +24,24 @@ const schema = {
       alternateName: ['Anton Vladislavovich Nazarov', 'Антон Назаров', 'Anton Nazarov', 'Antiokh'],
       url: 'https://antiokh.ru/',
       image: 'https://antiokh.ru/og-image.png',
-      jobTitle: ['IT Manager', 'Engineering Manager', 'Systems Architect', 'CTO'],
-      description: lang === 'ru' ? 'IT-менеджер и системный архитектор, который превращает сложные процессы в работающие цифровые системы.' : 'IT manager and systems architect who turns complex processes into working digital systems.',
+      jobTitle: ['Technology Leader', 'IT Manager', 'Systems Architect', 'CTO'],
+      description: lang === 'ru'
+        ? 'Технологический руководитель и системный архитектор из Белграда. Профессионально в IT с 2008 года: enterprise, банковские и государственные системы, Head of IT, собственные продукты и NeedleBit.'
+        : 'Technology leader and systems architect based in Belgrade. Working professionally in IT since 2008 across enterprise, banking, public-sector systems, IT leadership, independent products, and NeedleBit.',
       homeLocation: { '@type': 'Place', name: 'Belgrade, Serbia' },
       knowsLanguage: ['ru', 'en', 'sr'],
       sameAs: [
         'https://github.com/Antiokh',
-        'https://www.linkedin.com/in/nazarovanton/',
-        'https://www.upwork.com/freelancers/antiokh'
+        'https://www.linkedin.com/in/nazarovanton/'
       ],
       worksFor: { '@type': 'Organization', name: 'NeedleBit' },
-      knowsAbout: ['Engineering management', 'Systems architecture', 'Product delivery', 'Business process automation', 'AI-native development', 'Supabase', 'PostgreSQL']
+      knowsAbout: ['Engineering management', 'Systems architecture', 'Product delivery', 'Business process automation', 'AI-assisted development', 'Supabase', 'PostgreSQL']
     },
     {
       '@type': 'WebSite',
       '@id': 'https://antiokh.ru/#website',
       url: 'https://antiokh.ru/',
-      name: lang === 'ru' ? 'Антон Владиславович Назаров — IT-менеджер и системный архитектор' : 'Anton Vladislavovich Nazarov — IT Manager and Systems Architect',
+      name: lang === 'ru' ? 'Антон Назаров (Antiokh) — личный сайт' : 'Anton Nazarov (Antiokh) — personal website',
       inLanguage: lang,
       about: { '@id': 'https://antiokh.ru/#anton-nazarov' }
     }
@@ -54,7 +57,7 @@ const schema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="theme-color" content="#101310" />
+    <meta name="theme-color" content="#171914" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
     <meta property="og:title" content={title} />
@@ -66,21 +69,34 @@ const schema = {
     <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
     <link rel="alternate" hreflang="x-default" href={new URL(ruPath, Astro.site)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
-    <style is:global>.quotes footer{margin-top:auto;color:var(--acid);font-size:12px;background:transparent;padding:0;display:block;grid-column:auto}</style>
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href={lang === 'ru' ? '/' : '/en/'} aria-label={lang === 'ru' ? 'Антон Владиславович Назаров — на главную' : 'Anton Vladislavovich Nazarov — home'}><span>A</span> {lang === 'ru' ? 'Антон Назаров' : 'Anton Nazarov'}</a>
+      <a class="wordmark" href={homePath} aria-label={lang === 'ru' ? 'Антон Назаров — на главную' : 'Anton Nazarov — home'}>
+        <span>A</span>
+        <span class="wordmark-text">Antiokh <small>/ Anton Nazarov</small></span>
+      </a>
       <nav aria-label={lang === 'ru' ? 'Основная навигация' : 'Main navigation'}>
-        <a href={lang === 'ru' ? '/#story' : '/en/#story'}>{lang === 'ru' ? 'История' : 'Story'}</a><a href={lang === 'ru' ? '/#serbia' : '/en/#serbia'}>{lang === 'ru' ? 'Сербия' : 'Serbia'}</a><a href={lang === 'ru' ? '/#portfolio' : '/en/#portfolio'}>{lang === 'ru' ? 'Кейсы' : 'Cases'}</a><a href={lang === 'ru' ? '/#needlebit' : '/en/#needlebit'}>NeedleBit</a>
+        <a href={`${homePath}#story`}>{lang === 'ru' ? 'Путь' : 'Path'}</a>
+        <a href={`${homePath}#portfolio`}>{lang === 'ru' ? 'Проекты' : 'Projects'}</a>
+        <a href={`${homePath}#personal`}>{lang === 'ru' ? 'Вне работы' : 'Beyond work'}</a>
+        <a href={aboutPath}>{lang === 'ru' ? 'Обо мне' : 'About'}</a>
       </nav>
       <a class="lang-switch" href={lang === 'ru' ? enPath : ruPath} hreflang={lang === 'ru' ? 'en' : 'ru'}>{lang === 'ru' ? 'EN' : 'RU'}</a>
-      <a class="header-cta" href="mailto:mail@antiokh.ru">{lang === 'ru' ? 'Обсудить задачу' : 'Discuss a project'} ↗</a>
+      <a class="header-cta" href="mailto:mail@antiokh.ru">{lang === 'ru' ? 'Написать' : 'Write to me'} ↗</a>
     </header>
     <main><slot /></main>
     <footer>
-      <div><strong>{lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov'}</strong><p>Antiokh · IT management · architecture · delivery</p></div>
-      <div class="footer-links"><a href="https://github.com/Antiokh">GitHub</a><a href="https://www.linkedin.com/in/nazarovanton/">LinkedIn</a><a href="mailto:mail@antiokh.ru">Email</a></div>
+      <div>
+        <strong>{lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov'}</strong>
+        <p>Antiokh · Belgrade · systems / people / products</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Antiokh">GitHub</a>
+        <a href="https://www.linkedin.com/in/nazarovanton/">LinkedIn</a>
+        <a href="https://t.me/antiokh">Telegram</a>
+        <a href="mailto:mail@antiokh.ru">Email</a>
+      </div>
       <p class="fineprint">© {new Date().getFullYear()} · {lang === 'ru' ? 'Белград, Сербия' : 'Belgrade, Serbia'}</p>
     </footer>
   </body>
