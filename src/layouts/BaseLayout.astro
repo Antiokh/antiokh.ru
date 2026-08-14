@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  lang?: 'ru' | 'en';
+}
+
+const { title, description, path = '/', lang = 'ru' } = Astro.props;
+const canonical = new URL(path, Astro.site);
+const ruPath = lang === 'ru' ? path : path.replace(/^\/en(?=\/|$)/, '') || '/';
+const enPath = lang === 'en' ? path : path === '/' ? '/en/' : `/en${path}`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://antiokh.ru/#anton-nazarov',
+      name: lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov',
+      alternateName: ['Anton Vladislavovich Nazarov', 'Антон Назаров', 'Anton Nazarov', 'Antiokh'],
+      url: 'https://antiokh.ru/',
+      image: 'https://antiokh.ru/og-image.png',
+      jobTitle: ['IT Manager', 'Engineering Manager', 'Systems Architect', 'CTO'],
+      description: lang === 'ru' ? 'IT-менеджер и системный архитектор, который превращает сложные процессы в работающие цифровые системы.' : 'IT manager and systems architect who turns complex processes into working digital systems.',
+      homeLocation: { '@type': 'Place', name: 'Belgrade, Serbia' },
+      knowsLanguage: ['ru', 'en', 'sr'],
+      sameAs: [
+        'https://github.com/Antiokh',
+        'https://www.linkedin.com/in/nazarovanton/',
+        'https://www.upwork.com/freelancers/antiokh'
+      ],
+      worksFor: { '@type': 'Organization', name: 'NeedleBit' },
+      knowsAbout: ['Engineering management', 'Systems architecture', 'Product delivery', 'Business process automation', 'AI-native development', 'Supabase', 'PostgreSQL']
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://antiokh.ru/#website',
+      url: 'https://antiokh.ru/',
+      name: lang === 'ru' ? 'Антон Владиславович Назаров — IT-менеджер и системный архитектор' : 'Anton Vladislavovich Nazarov — IT Manager and Systems Architect',
+      inLanguage: lang,
+      about: { '@id': 'https://antiokh.ru/#anton-nazarov' }
+    }
+  ]
+};
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#101310" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://antiokh.ru/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" hreflang="ru" href={new URL(ruPath, Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(ruPath, Astro.site)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <style is:global>.quotes footer{margin-top:auto;color:var(--acid);font-size:12px;background:transparent;padding:0;display:block;grid-column:auto}</style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href={lang === 'ru' ? '/' : '/en/'} aria-label={lang === 'ru' ? 'Антон Владиславович Назаров — на главную' : 'Anton Vladislavovich Nazarov — home'}><span>A</span> {lang === 'ru' ? 'Антон Назаров' : 'Anton Nazarov'}</a>
+      <nav aria-label={lang === 'ru' ? 'Основная навигация' : 'Main navigation'}>
+        <a href={lang === 'ru' ? '/#approach' : '/en/#approach'}>{lang === 'ru' ? 'Подход' : 'Approach'}</a><a href={lang === 'ru' ? '/projects/' : '/en/projects/'}>{lang === 'ru' ? 'Проекты' : 'Projects'}</a><a href={lang === 'ru' ? '/about/' : '/en/about/'}>{lang === 'ru' ? 'Обо мне' : 'About'}</a>
+      </nav>
+      <a class="lang-switch" href={lang === 'ru' ? enPath : ruPath} hreflang={lang === 'ru' ? 'en' : 'ru'}>{lang === 'ru' ? 'EN' : 'RU'}</a>
+      <a class="header-cta" href="mailto:mail@antiokh.ru">{lang === 'ru' ? 'Обсудить задачу' : 'Discuss a project'} ↗</a>
+    </header>
+    <main><slot /></main>
+    <footer>
+      <div><strong>{lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov'}</strong><p>Antiokh · IT management · architecture · delivery</p></div>
+      <div class="footer-links"><a href="https://github.com/Antiokh">GitHub</a><a href="https://www.linkedin.com/in/nazarovanton/">LinkedIn</a><a href="mailto:mail@antiokh.ru">Email</a></div>
+      <p class="fineprint">© {new Date().getFullYear()} · {lang === 'ru' ? 'Белград, Сербия' : 'Belgrade, Serbia'}</p>
+    </footer>
+  </body>
+</html>

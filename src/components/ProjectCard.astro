@@ -1,0 +1,8 @@
+---
+interface Props { index: string; title: string; kind: string; result: string; stack: string; image: string; slug: string; basePath?: string; }
+const { index, title, kind, result, stack, image, slug, basePath = '/projects/' } = Astro.props;
+---
+<article class="project-card">
+  <a class="project-image" href={`${basePath}#${slug}`}><img src={image} alt={`Project interface: ${title}`} loading="lazy" /></a>
+  <div class="project-copy"><div class="project-meta"><span>{index}</span><span>{kind}</span></div><h3><a href={`${basePath}#${slug}`}>{title}</a></h3><p>{result}</p><div class="project-footer"><span>{stack}</span><a href={`${basePath}#${slug}`} aria-label={title}>↗</a></div></div>
+</article>

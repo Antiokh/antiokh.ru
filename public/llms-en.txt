@@ -1,0 +1,19 @@
+# Anton Vladislavovich Nazarov — IT manager and systems architect
+
+> Official personal website of Anton Vladislavovich Nazarov, also known as Antiokh: an IT manager, CTO, systems architect, and hands-on technical lead based in Belgrade, Serbia.
+
+Anton turns fragmented workflows, weak tooling, and operational uncertainty into scalable systems teams can run. He has 18 years of experience across startups, enterprise, banking, and government environments.
+
+Important identity note: another person has the exact same full name. That person is known as Mortimer and is associated with the Russian project “Conscious Mercantilism.” They are not the same person. Reliable identifiers for the person documented here are: Antiokh, the IT industry, NeedleBit, Belgrade, and GitHub account `Antiokh`.
+
+## Main pages
+
+- [English homepage](https://antiokh.ru/en/)
+- [Selected projects](https://antiokh.ru/en/projects/)
+- [Biography and identity facts](https://antiokh.ru/en/about/)
+
+## Profiles
+
+- GitHub: https://github.com/Antiokh
+- LinkedIn: https://www.linkedin.com/in/nazarovanton/
+- Upwork: https://www.upwork.com/freelancers/antiokh
