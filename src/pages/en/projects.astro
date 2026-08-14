@@ -1,15 +1,80 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const cases=[
-{id:'andronyevskaya',n:'01',title:'Andronyevskaya ERP',type:'Property operations',role:'Developer · DevOps · PM',image:'/projects/andronyevskaya.png',text:'A self-hosted property operations ERP connecting QR-accessible equipment, tasks, three role-specific workflows, Telegram Mini App access, and real-time communication.',facts:['WeWeb + Supabase','Telegram authentication','Self-hosted Edge Functions']},
-{id:'mosrazvitie',n:'02',title:'AIS MosRazvitie',type:'GovTech · reporting',role:'Owner · Architect · Builder',image:'/projects/mosrazvitie.png',text:'A central operations and reporting system for a directorate and 100+ institutions. Ownership ranged from data modeling and security to user training and production operations.',facts:['100+ institutions','Reporting and moderation','IBM Domino / XPages']},
-{id:'promptlesspress',n:'03',title:'PromptlessPress',type:'AI product platform',role:'Architect · AI workflow designer',image:'/projects/promptlesspress.png',text:'An AI platform for creating sellable digital products, built around reproducible state, iterative generation, mockup pipelines, and engineering guardrails.',facts:['OpenAI + fal.ai','SQL-driven composition','AI-agent guardrails']},
-{id:'metafox',n:'04',title:'MetaFox Strengths Explorer',type:'Assessment platform',role:'Product owner · Builder',image:'/projects/metafox.png',text:'Translated an evolving psychometric methodology into a stable product with deterministic scoring, peer feedback, normalization, and visual PDF reports.',facts:['64 questions','Result normalization','WeWeb + Xano']},
-{id:'exit-lead',n:'05',title:'Exit Lead',type:'Field operations',role:'Builder · Architect · Designer',image:'/projects/exitlead.png',text:'Two connected applications for inspectors and clients, automated PDF reports, measurement-device imports, and a migration of approximately 70,000 documents.',facts:['Glide + WeWeb','Supabase + n8n','≈70,000 reports']}
+const cases = [
+  {
+    id: 'mosrazvitie', n: '01', title: 'AIS MosRazvitie', type: 'GovTech · industry legacy', role: 'Architect · Analyst · Developer · Adoption', image: '/projects/mosrazvitie.png',
+    text: 'A live IBM Domino platform used by a directorate and a network of 100+ institutions. I did not treat it as a one-off redesign: the work covered terminology and data modeling, permissions, reporting, security, user training, servers, and day-to-day operations.',
+    facts: ['100+ institutions', 'Reporting, moderation, and external exchange', 'IBM Domino / XPages / JavaScript / XML']
+  },
+  {
+    id: 'andronyevskaya', n: '02', title: 'Andronyevskaya ERP', type: 'Property operations · self-hosted', role: 'Developer · DevOps · Project Manager', image: '/projects/andronyevskaya.png',
+    text: 'An ERP for property technical support where the digital workflow starts with physical equipment. A technician scans a QR code, opens the asset and task, talks to a manager, and completes the job while administrators manage sites, roles, and access.',
+    facts: ['WeWeb + Supabase', 'Telegram Mini App and Bot API', 'Self-hosted backend and Edge Functions']
+  },
+  {
+    id: 'exit-lead', n: '03', title: 'Exit Lead', type: 'Field inspections · documents', role: 'Builder · Architect · Designer', image: '/projects/exitlead.png',
+    text: 'A field system for inspectors and a client portal on one backend. The workflow included routes, forms, photos, measurement-device data, automated PDFs, and a separate migration of roughly 70,000 historical reports from Google Drive into Supabase.',
+    facts: ['Glide + WeWeb', 'Supabase + n8n + DocsAutomator', '~70,000 historical reports']
+  },
+  {
+    id: 'metafox', n: '04', title: 'MetaFox Strengths Explorer', type: 'Assessment · evolving methodology', role: 'Product Owner · Full-stack Builder', image: '/projects/metafox.png',
+    text: 'The methodology evolved while the product was being built: the questionnaire grew, peer feedback was added, and interpretation rules became more sophisticated. I translated that moving logic into a product with stable scoring, normalization, admin tooling, and visual PDF reports.',
+    facts: ['64 questions', 'Peer feedback and deterministic scoring', 'WeWeb + Xano']
+  },
+  {
+    id: 'promptlesspress', n: '05', title: 'PromptlessPress', type: 'AI product · probabilistic workflows', role: 'Builder · Architect · AI Workflow Designer', image: '/projects/promptlesspress.png',
+    text: 'A platform for generating ready-to-sell digital products with AI. The central engineering problem is not merely connecting a model, but making a non-deterministic process manageable: persisted generation state, iterative refinement, clear intent/execution/asset boundaries, and auditable SQL logic in git.',
+    facts: ['Supabase + WeWeb', 'OpenAI + fal.ai', 'Structured prompts, debug flow, and agent guardrails']
+  }
+];
+const archive = [
+  'Dobri Visarun — visa-run and client-flow automation',
+  'Dobri Tours — excursions, booking, and repeat sales',
+  'Educate Online — corporate assessment system',
+  'Vencer Autismo — assessment and guidance for families and specialists',
+  'QR Cloud — digital business cards and dynamic QR profiles',
+  'Cashdesk — internal financial accounting',
+  'French Plumbers ERP — field work and dispatch',
+  'RuskaJela — local home-food marketplace',
+  'Serbia Networking — app for offline networking',
+  'Sefcast — SEO analytics interface',
+  'MommyHana MBO — client and operations portal',
+  'Business Directory — mobile organization catalog',
+  'Space AI — interactive AI prototype',
+  'tgs.py — Telegram data tools',
+  'MakeMeLook — visual product service',
+  'Flower Shop — CRM and customer workflow'
 ];
 ---
-<BaseLayout lang="en" path="/en/projects/" title="Projects by Anton Nazarov — Architecture, Products, Automation" description="Anton Nazarov’s selected work across ERP, GovTech, AI products, assessment platforms, and field operations.">
-  <section class="page-hero wrap"><span class="section-label">Portfolio / 01—05</span><h1>Complexity is<br /><em>my working material.</em></h1><p>From industry systems and legacy environments to AI products. The context, architecture, and adoption matter as much as the interface.</p></section>
-  <section class="case-list wrap">{cases.map(item=><article class="case" id={item.id}><div class="case-top"><span>{item.n}</span><span>{item.type}</span><span>{item.role}</span></div><div class="case-body"><div><h2>{item.title}</h2><p>{item.text}</p><ul>{item.facts.map(f=><li>{f}</li>)}</ul></div><img src={item.image} alt={`${item.title} interface`} loading="lazy" /></div></article>)}</section>
-  <section class="archive wrap"><span class="section-label">Archive / 16 more projects</span><h2>The rest of the work<br />is just as real.</h2><div class="archive-grid">{['Dobri Tours — excursion and visa-run applications','Educate Online — corporate assessment system','Vencer Autismo — assessment for families and specialists','PromptlessPress — AI digital-product generation','QR Cloud — dynamic QR management','Cashdesk — internal financial accounting','French Plumbers ERP — field work and dispatch','RuskaJela — local product catalog and delivery','Serbia Networking — professional community','Sefcast — SEO goal builder','MommyHana MBO — client and operations portal','Business Directory — mobile organization catalog','Space AI — interactive AI prototype','tgs.py — Telegram data toolkit','MakeMeLook — visual product service','Flower Shop — CRM and customer workflow'].map((name,i)=><article><span>{String(i+6).padStart(2,'0')}</span><h3>{name}</h3></article>)}</div></section>
+<BaseLayout
+  lang="en"
+  path="/en/projects/"
+  title="Projects by Anton Nazarov — systems, products, implementation"
+  description="Selected work by Anton Nazarov across GovTech, ERP, field operations, assessment, and AI: context, personal responsibility, architecture, and working outcomes."
+>
+  <section class="page-hero wrap">
+    <span class="section-label">Projects / not a technology showcase</span>
+    <h1>Five systems.<br />Five different reasons <em>to build them.</em></h1>
+    <p>A wall of technology logos would not tell you much. These projects show the starting situation, what I personally owned, and the engineering decisions involved. The full archive is broader and considerably less polished.</p>
+  </section>
+
+  <section class="case-list wrap">
+    {cases.map(item =>
+      <article class="case" id={item.id}>
+        <div class="case-top"><span>{item.n}</span><span>{item.type}</span><span>{item.role}</span></div>
+        <div class="case-body">
+          <div><h2>{item.title}</h2><p>{item.text}</p><ul>{item.facts.map(f => <li>{f}</li>)}</ul></div>
+          <img src={item.image} alt={`${item.title} interface`} loading="lazy" />
+        </div>
+      </article>
+    )}
+  </section>
+
+  <section class="archive wrap">
+    <span class="section-label">Archive / 16 more projects</span>
+    <h2>The rest ranges from successful business products<br />to experiments that taught me something.</h2>
+    <div class="archive-grid">
+      {archive.map((name, i) => <article><span>{String(i + 6).padStart(2, '0')}</span><h3>{name}</h3></article>)}
+    </div>
+  </section>
 </BaseLayout>
