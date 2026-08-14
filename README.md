@@ -113,12 +113,12 @@ The build must finish with zero Astro errors and warnings.
 
 Cloudflare Pages project: `antiokh`
 
-```bash
-npm run build
-npx wrangler pages deploy dist --project-name antiokh --branch main
-```
+Cloudflare Pages is connected directly to `Antiokh/antiokh.ru`. Every push to
+`main` starts a production build on Cloudflare with `npm run build`; the output
+directory is `dist`. Other branches receive preview deployments.
 
-Cloudflare credentials must come from the local environment. Never commit API tokens, account secrets, `.env` files, or Wrangler authentication state.
+GitHub Actions validates the same build but does not deploy it. Manual Wrangler
+deployments are reserved for recovery and must not replace the Git integration.
 
 ## Publishing rule
 
@@ -127,7 +127,7 @@ Every completed website update must be:
 1. validated with `npm run build`;
 2. committed intentionally;
 3. pushed to `main` in `Antiokh/antiokh.ru`;
-4. deployed to Cloudflare Pages;
+4. deployed automatically by Cloudflare Pages from the pushed commit;
 5. reported with the commit hash and deployment URL.
 
 See [AGENTS.md](./AGENTS.md) for the agent-specific operating contract.

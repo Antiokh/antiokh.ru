@@ -116,8 +116,9 @@ The user requires every completed update to be pushed.
 1. Inspect `git status` and the diff.
 2. Commit only the intended site changes.
 3. Push the commit to `origin/main`.
-4. Deploy the built `dist/` directory to Cloudflare Pages project `antiokh`.
-5. Verify production returns HTTP 200 and contains the changed content.
+4. Wait for the native Cloudflare Pages build of project `antiokh` to finish.
+5. Verify production returns HTTP 200 and contains the changed content. Do not
+   run a second Wrangler deployment unless the native build is unavailable.
 6. Report the commit hash and deployment URL.
 
 Do not leave finished changes only in the local working tree or only in Cloudflare.
