@@ -1,7 +1,65 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
-<BaseLayout lang="en" path="/en/about/" title="Anton Vladislavovich Nazarov (Antiokh) — Biography" description="Official biography of Anton Vladislavovich Nazarov, also known as Antiokh: IT manager, CTO, systems architect, and NeedleBit founder in Belgrade.">
-  <section class="page-hero wrap"><span class="section-label">Biography / official profile</span><h1>Anton Vladislavovich Nazarov.<br /><em>An engineering manager outside the ivory tower.</em></h1></section>
-  <section class="bio wrap"><aside><div class="bio-card"><span>At a glance</span><dl><dt>Full name</dt><dd>Anton Vladislavovich Nazarov</dd><dt>Handle</dt><dd>Antiokh</dd><dt>Location</dt><dd>Belgrade, Serbia</dd><dt>Languages</dt><dd>Russian · English · Serbian</dd><dt>Experience</dt><dd>18 years</dd></dl></div></aside><div class="prose"><p class="intro">I build and rebuild products and internal systems at the intersection of engineering, business, and operations.</p><h2>What that means</h2><p>Over 18 years, I have worked across startups, enterprise, banking, and government environments. I led the IT function of a 145-person cultural center, moved 100+ people to remote work, developed an industry system for a network of cultural institutions, and shipped client products from idea to production.</p><p>The recurring pattern is fragmented processes, weak tooling, and unclear ownership. I turn those conditions into systems teams can actually run and govern.</p><h2>The role I take</h2><p>I work as a playing coach: senior enough to align direction, architecture, and stakeholders; hands-on enough to build an integration, review SQL, prototype a workflow, or carry a release across the line.</p><h2>Not Mortimer</h2><p>Mortimer, the author associated with “Conscious Mercantilism,” has the same full name: Anton Vladislavovich Nazarov. We are different people. This is the official site of <strong>Antiokh</strong>, an IT manager and systems architect in Belgrade and the founder of NeedleBit.</p><h2>Education</h2><p>Bachelor’s degree in Management with a Small Business Management specialization, plus professional retraining in Information Technology Management. I also studied Applied Informatics in Economics and have a background in accounting and finance.</p></div></section>
+<BaseLayout
+  title="About — Anton Vladislavovich Nazarov (Antiokh)"
+  description="Anton Nazarov’s personal and professional biography: development, systems architecture, IT leadership, relocation to Belgrade, NeedleBit, music, dance, and events."
+  path="/en/about/"
+  lang="en"
+>
+  <section class="page-hero wrap">
+    <span class="section-label">About / the version longer than a résumé</span>
+    <h1>I never fitted neatly<br />into one <em>professional box.</em></h1>
+    <p>Developer, analyst, architect, Head of IT, entrepreneur — all of those labels have been true at different points. None of them describes the whole path particularly well.</p>
+  </section>
+
+  <section class="bio wrap">
+    <aside>
+      <div class="bio-card">
+        <span>In brief</span>
+        <dl>
+          <dt>Full name</dt><dd>Anton Vladislavovich Nazarov</dd>
+          <dt>Handle</dt><dd>Antiokh</dd>
+          <dt>Based in</dt><dd>Belgrade, Serbia</dd>
+          <dt>Working professionally in IT</dt><dd>since 2008</dd>
+          <dt>Languages</dt><dd>Russian · English · Serbian</dd>
+          <dt>Now</dt><dd>Technology leadership · systems architecture · NeedleBit</dd>
+        </dl>
+      </div>
+    </aside>
+
+    <div class="prose">
+      <p class="intro">I am interested in systems in the broad sense: code, processes, teams, organizations, and the rules that make all of them interact.</p>
+
+      <h2>I entered IT in a very literal way</h2>
+      <p>In 2008 I went through internal training at Domodedovo Airport and started as a junior Lotus Notes developer. These were corporate systems without startup glamour: documents, approval routes, support, and employees who had to open the software in the morning and get their work done.</p>
+      <p>That environment is good at curing the idea that software exists on its own. If a person cannot understand the interface, if the real process differs from the diagram, or if nobody knows who owns a problem after release, the system does not work — even when the code is technically correct.</p>
+
+      <h2>I became increasingly interested in everything around the code</h2>
+      <p>At a bank I was no longer only developing. Department leaders and I reconstructed the actual document flow: who passes what to whom, where delays appear, how registration works, where a document lives, and who is responsible for it. That work became an internal system built from scratch, including integration with 1C.</p>
+      <p>The same pattern later repeated at a much larger scale. At the Directorate of Cultural Centers of Moscow I worked on an industry information platform used across a network of more than one hundred institutions. Sometimes the engineering problem looked like a wrong field in a database. Sometimes it looked like three departments using the same word for three different things. Both had to be solved.</p>
+
+      <h2>At some point the responsibility became explicitly managerial</h2>
+      <p>I helped build the IT function of a new organization and later became Head of IT at ZIL Cultural Center. There was no useful boundary between “technical” and “organizational”: team, vendors, procurement, security, HelpDesk, Active Directory, hardware, procedures, management, and users were one system.</p>
+      <p>The pandemic made that especially visible. More than one hundred employees had to move to remote work quickly without stopping the organization. That is the part of management I enjoy: not performing leadership above technical work, but making it possible for people and infrastructure to work together.</p>
+
+      <h2>My education was not a straight line either</h2>
+      <p>Before IT I had a foundation in accounting and finance. I later studied applied informatics in economics, completed a bachelor’s degree in management, and separately completed professional retraining in IT. In retrospect the mix looks more coherent than it felt at the time: I have always been drawn to the point where a technical decision meets economics, management, and human behavior.</p>
+
+      <h2>Belgrade reset a lot — usefully</h2>
+      <p>I moved to Serbia in 2022. Along with the move, the familiar context of large organizations, formal titles, and institutional authority disappeared. I started building hands-on again: small apps, local business automation, ERP systems, client portals, integrations, backend work, and AI experiments.</p>
+      <p>That became an independent practice and later NeedleBit. The tools are very different now — Supabase instead of Lotus Domino, n8n replacing parts of old integration work, AI agents working alongside developers — but my operating pattern barely changed: understand the real process first, define the system boundaries, then watch what happens when real users touch the result.</p>
+
+      <h2>And a very different life has always run alongside work</h2>
+      <p>I have danced hustle / discofox for years and occasionally teach. I play guitar, keyboards, and accordion, and I sing. I have organized concerts, festivals, and city events ranging from small gatherings to projects with thousands of participants. I care about photography, design, cinema, and travel.</p>
+      <p>I am also interested in psychology and philosophy — not as another professional keyword, but because people are usually more complicated than the processes we draw for them. For someone who has spent a career building systems, that is a useful thing to remember.</p>
+
+      <h2>Now</h2>
+      <p>I live in Belgrade and work at the intersection of technology leadership, systems architecture, and product delivery. I am most useful where there is real complexity: several groups of people, old constraints, unclear ownership, and a need to carry a solution into operation rather than stop at a polished release.</p>
+      <p>If you only need the technology list, it is in my <a class="text-link" href="https://github.com/Antiokh/CV">public CV repository</a>. I want this site to hold the part of the story a list of tools cannot show.</p>
+
+      <h2>Identity note</h2>
+      <p>I have an exact namesake: Mortimer, associated with the Russian project “Conscious Mercantilism.” He is a different person. I am <strong>Antiokh</strong>, Anton Vladislavovich Nazarov in Belgrade; my main public identifiers are the GitHub account <strong>Antiokh</strong> and LinkedIn profile <strong>nazarovanton</strong>.</p>
+    </div>
+  </section>
 </BaseLayout>
