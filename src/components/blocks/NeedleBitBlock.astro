@@ -1,0 +1,6 @@
+---
+import type { HomeContent } from '../../data/home';
+const { content } = Astro.props as { content: HomeContent };
+const n = content.needlebit;
+---
+<section id="needlebit" class="needlebit-chapter dark-section"><div class="wrap needlebit-grid"><div><span class="section-label">{n.label}</span><h2>{n.title}</h2></div><div><p class="chapter-lead">{n.lead}</p><p>{n.text}</p><div class="needlebit-links"><a class="button acid" href={n.primaryUrl}>{n.primary}</a><a class="text-link light-link" href={n.secondaryUrl}>{n.secondary}</a></div></div></div></section>

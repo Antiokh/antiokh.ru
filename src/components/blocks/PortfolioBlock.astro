@@ -1,0 +1,7 @@
+---
+import type { HomeContent } from '../../data/home';
+const { content } = Astro.props as { content: HomeContent };
+const p = content.portfolio;
+---
+<section id="portfolio" class="real-work"><div class="wrap"><div class="portfolio-intro"><span class="section-label">{p.label}</span><h2>{p.title.split('\n').map(line=><>{line}<br /></>)}</h2><p>{p.intro}</p></div>{content.cases.map((item,i)=><article class:list={['feature-case',i%2&&'reverse']} id={item.id}><div class="feature-visual"><img src={item.image} alt={`${item.title} interface`} loading="lazy" /><span>{item.number}</span></div><div class="feature-copy"><p class="case-tag">{item.tag}</p><h3>{item.title}</h3><p class="case-lead">{item.lead}</p><p>{item.text}</p><div class="case-proof">{p.roleLabel}: {item.proof}</div><a href={`${content.lang === 'ru' ? '/projects/' : '/en/projects/'}#${item.id}`}>{p.caseCta}</a></div></article>)}<div class="all-work"><p>{p.more}</p><a class="button solid" href="https://github.com/Antiokh/CV/tree/main/portfolio">{p.allCta}</a></div></div></section>
+<section class="voices dark-section"><div class="wrap"><div class="voices-head"><span class="section-label">{content.testimonials.label}</span><h2>{content.testimonials.title.split('\n').map(line=><>{line}<br /></>)}</h2></div><div class="quotes">{content.testimonials.items.map(item=><blockquote><p>{item.quote}</p><footer>{item.author}</footer></blockquote>)}</div></div></section>

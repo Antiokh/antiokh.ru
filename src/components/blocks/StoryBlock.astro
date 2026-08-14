@@ -1,0 +1,8 @@
+---
+import type { HomeContent } from '../../data/home';
+const { content } = Astro.props as { content: HomeContent };
+---
+<section class="manifesto dark-section"><div class="wrap"><p class="section-label">{content.manifesto.label}</p><blockquote>{content.manifesto.quote}</blockquote><div class="manifesto-notes">{content.manifesto.notes.map(note=><p>{note}</p>)}</div></div></section>
+<section id="story" class="story wrap"><div class="story-aside"><span class="section-label">{content.story.label}</span><h2>{content.story.title}</h2></div><div class="story-body"><p class="story-lead">{content.story.lead}</p><p>{content.story.text}</p></div></section>
+<section class="career"><div class="wrap"><div class="career-list">{content.timeline.map((item,i)=><article class="career-item"><div class="career-date">{item.date}</div><div class="career-mark">{String(i+1).padStart(2,'0')}</div><div><span>{item.kicker}</span><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></section>
+<section class="numbers dark-section"><div class="wrap number-grid">{content.metrics.map(item=><div><b>{item.value}</b><span>{item.label}</span></div>)}</div></section>

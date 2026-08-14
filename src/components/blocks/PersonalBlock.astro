@@ -1,0 +1,7 @@
+---
+import type { HomeContent } from '../../data/home';
+const { content } = Astro.props as { content: HomeContent };
+---
+<section id="personal" class="personal wrap"><div class="personal-title"><span class="section-label">{content.personal.label}</span><h2>{content.personal.title}</h2></div><div class="personal-copy"><p class="story-lead">{content.personal.lead}</p><p>{content.personal.text}</p><div class="interest-list">{content.personal.interests.map(item=><span>{item}</span>)}</div></div></section>
+<section class="identity-note wrap"><div><span class="section-label">{content.identity.label}</span><h2>{content.identity.title}</h2></div><div>{content.identity.text.map(item=><p>{item}</p>)}<a href="https://www.linkedin.com/in/nazarovanton/">{content.identity.cta}</a></div></section>
+<section class="contact personal-contact"><div class="wrap"><p class="section-label">{content.contact.label}</p><h2>{content.contact.title.split('\n').map(line=><>{line}<br /></>)}</h2><div><a href="mailto:mail@antiokh.ru">mail@antiokh.ru ↗</a><a href="https://www.linkedin.com/in/nazarovanton/">LinkedIn ↗</a><a href="https://t.me/antiokh">Telegram ↗</a></div></div></section>
