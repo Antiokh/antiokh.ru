@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomePage from '../../components/HomePage.astro';
+import { srHome } from '../../data/home-sr';
+const content = srHome;
+---
+<BaseLayout title={content.meta.title} description={content.meta.description} path={content.meta.path} lang={content.lang}>
+  <HomePage content={content as any} />
+</BaseLayout>
