@@ -1,33 +1,70 @@
 ---
 import '../styles/global.css';
 
+type Locale = 'ru' | 'en' | 'sr';
+
 interface Props {
   title: string;
   description: string;
   path?: string;
-  lang?: 'ru' | 'en';
+  lang?: Locale;
 }
 
 const { title, description, path = '/', lang = 'ru' } = Astro.props;
 const canonical = new URL(path, Astro.site);
-const ruPath = lang === 'ru' ? path : path.replace(/^\/en(?=\/|$)/, '') || '/';
-const enPath = lang === 'en' ? path : path === '/' ? '/en/' : `/en${path}`;
-const homePath = lang === 'ru' ? '/' : '/en/';
-const aboutPath = lang === 'ru' ? '/about/' : '/en/about/';
+const suffix = path.replace(/^\/(en|sr)(?=\/|$)/, '') || '/';
+const localePath = (locale: Locale) => locale === 'ru'
+  ? suffix
+  : suffix === '/' ? `/${locale}/` : `/${locale}${suffix}`;
+const ruPath = localePath('ru');
+const enPath = localePath('en');
+const srPath = localePath('sr');
+const homePath = localePath(lang).replace(suffix, '/') || '/';
+const aboutPath = lang === 'ru' ? '/about/' : `/${lang}/about/`;
+
+const copy = {
+  ru: {
+    personName: 'Антон Владиславович Назаров',
+    description: 'Технологический руководитель и системный архитектор из Белграда. Профессионально в IT с 2008 года: enterprise, банковские и государственные системы, Head of IT, собственные продукты и NeedleBit.',
+    siteName: 'Антон Назаров (Antiokh) — личный сайт',
+    homeLabel: 'Антон Назаров — на главную',
+    navLabel: 'Основная навигация',
+    path: 'Путь', projects: 'Проекты', personal: 'Вне работы', about: 'Обо мне', contact: 'Написать',
+    footer: 'Белград, Сербия', systems: 'systems / people / products'
+  },
+  en: {
+    personName: 'Anton Vladislavovich Nazarov',
+    description: 'Technology leader and systems architect based in Belgrade. Working professionally in IT since 2008 across enterprise, banking, public-sector systems, IT leadership, independent products, and NeedleBit.',
+    siteName: 'Anton Nazarov (Antiokh) — personal website',
+    homeLabel: 'Anton Nazarov — home',
+    navLabel: 'Main navigation',
+    path: 'Path', projects: 'Projects', personal: 'Beyond work', about: 'About', contact: 'Write to me',
+    footer: 'Belgrade, Serbia', systems: 'systems / people / products'
+  },
+  sr: {
+    personName: 'Anton Vladislavovich Nazarov',
+    description: 'Tehnološki rukovodilac i sistemski arhitekta iz Beograda. Profesionalno u IT-u od 2008: enterprise, bankarski i javni sistemi, vođenje IT-a, sopstveni proizvodi i NeedleBit.',
+    siteName: 'Anton Nazarov (Antiokh) — lični sajt',
+    homeLabel: 'Anton Nazarov — početna',
+    navLabel: 'Glavna navigacija',
+    path: 'Put', projects: 'Projekti', personal: 'Van posla', about: 'O meni', contact: 'Piši mi',
+    footer: 'Beograd, Srbija', systems: 'sistemi / ljudi / proizvodi'
+  }
+} as const;
+const t = copy[lang];
+
 const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Person',
       '@id': 'https://antiokh.ru/#anton-nazarov',
-      name: lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov',
+      name: t.personName,
       alternateName: ['Anton Vladislavovich Nazarov', 'Антон Назаров', 'Anton Nazarov', 'Antiokh'],
       url: 'https://antiokh.ru/',
       image: 'https://antiokh.ru/og-image.png',
       jobTitle: ['Technology Leader', 'IT Manager', 'Systems Architect', 'CTO'],
-      description: lang === 'ru'
-        ? 'Технологический руководитель и системный архитектор из Белграда. Профессионально в IT с 2008 года: enterprise, банковские и государственные системы, Head of IT, собственные продукты и NeedleBit.'
-        : 'Technology leader and systems architect based in Belgrade. Working professionally in IT since 2008 across enterprise, banking, public-sector systems, IT leadership, independent products, and NeedleBit.',
+      description: t.description,
       homeLocation: { '@type': 'Place', name: 'Belgrade, Serbia' },
       knowsLanguage: ['ru', 'en', 'sr'],
       sameAs: [
@@ -41,7 +78,7 @@ const schema = {
       '@type': 'WebSite',
       '@id': 'https://antiokh.ru/#website',
       url: 'https://antiokh.ru/',
-      name: lang === 'ru' ? 'Антон Назаров (Antiokh) — личный сайт' : 'Anton Nazarov (Antiokh) — personal website',
+      name: t.siteName,
       inLanguage: lang,
       about: { '@id': 'https://antiokh.ru/#anton-nazarov' }
     }
@@ -59,7 +96,7 @@ const schema = {
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#171914" />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : 'en_US'} />
+    <meta property="og:locale" content={lang === 'ru' ? 'ru_RU' : lang === 'sr' ? 'sr_RS' : 'en_US'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -67,29 +104,36 @@ const schema = {
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="alternate" hreflang="ru" href={new URL(ruPath, Astro.site)} />
     <link rel="alternate" hreflang="en" href={new URL(enPath, Astro.site)} />
+    <link rel="alternate" hreflang="sr" href={new URL(srPath, Astro.site)} />
     <link rel="alternate" hreflang="x-default" href={new URL(ruPath, Astro.site)} />
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href={homePath} aria-label={lang === 'ru' ? 'Антон Назаров — на главную' : 'Anton Nazarov — home'}>
+      <a class="wordmark" href={homePath} aria-label={t.homeLabel}>
         <span>A</span>
         <span class="wordmark-text">Antiokh <small>/ Anton Nazarov</small></span>
       </a>
-      <nav aria-label={lang === 'ru' ? 'Основная навигация' : 'Main navigation'}>
-        <a href={`${homePath}#story`}>{lang === 'ru' ? 'Путь' : 'Path'}</a>
-        <a href={`${homePath}#portfolio`}>{lang === 'ru' ? 'Проекты' : 'Projects'}</a>
-        <a href={`${homePath}#personal`}>{lang === 'ru' ? 'Вне работы' : 'Beyond work'}</a>
-        <a href={aboutPath}>{lang === 'ru' ? 'Обо мне' : 'About'}</a>
+      <nav aria-label={t.navLabel}>
+        <a href={`${homePath}#story`}>{t.path}</a>
+        <a href={`${homePath}#portfolio`}>{t.projects}</a>
+        <a href={`${homePath}#personal`}>{t.personal}</a>
+        <a href={aboutPath}>{t.about}</a>
       </nav>
-      <a class="lang-switch" href={lang === 'ru' ? enPath : ruPath} hreflang={lang === 'ru' ? 'en' : 'ru'}>{lang === 'ru' ? 'EN' : 'RU'}</a>
-      <a class="header-cta" href="mailto:mail@antiokh.ru">{lang === 'ru' ? 'Написать' : 'Write to me'} ↗</a>
+      <div class="lang-switch" aria-label="Language">
+        <a href={ruPath} hreflang="ru" aria-current={lang === 'ru' ? 'page' : undefined}>RU</a>
+        <span>·</span>
+        <a href={enPath} hreflang="en" aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
+        <span>·</span>
+        <a href={srPath} hreflang="sr" aria-current={lang === 'sr' ? 'page' : undefined}>SR</a>
+      </div>
+      <a class="header-cta" href="mailto:mail@antiokh.ru">{t.contact} ↗</a>
     </header>
     <main><slot /></main>
     <footer>
       <div>
-        <strong>{lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov'}</strong>
-        <p>Antiokh · Belgrade · systems / people / products</p>
+        <strong>{t.personName}</strong>
+        <p>Antiokh · Belgrade · {t.systems}</p>
       </div>
       <div class="footer-links">
         <a href="https://github.com/Antiokh">GitHub</a>
@@ -97,7 +141,7 @@ const schema = {
         <a href="https://t.me/antiokh">Telegram</a>
         <a href="mailto:mail@antiokh.ru">Email</a>
       </div>
-      <p class="fineprint">© {new Date().getFullYear()} · {lang === 'ru' ? 'Белград, Сербия' : 'Belgrade, Serbia'}</p>
+      <p class="fineprint">© {new Date().getFullYear()} · {t.footer}</p>
     </footer>
   </body>
 </html>
