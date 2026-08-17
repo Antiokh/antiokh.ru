@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const cases = [
+  {
+    id: 'mosrazvitie', n: '01', title: 'AIS MosRazvitie', type: 'GovTech · sektorski legacy sistem', role: 'Architect · Analyst · Developer · Adoption', image: '/projects/mosrazvitie.png',
+    text: 'Aktivna IBM Domino platforma koju su koristili direkcija i mreža od više od 100 ustanova. Nisam je tretirao kao jednokratni redesign: posao je obuhvatao terminologiju i model podataka, prava pristupa, izveštavanje, bezbednost, obuku korisnika, servere i svakodnevnu eksploataciju.',
+    facts: ['100+ ustanova', 'Izveštavanje, moderacija i spoljna razmena', 'IBM Domino / XPages / JavaScript / XML']
+  },
+  {
+    id: 'andronyevskaya', n: '02', title: 'Andronyevskaya ERP', type: 'Property operations · self-hosted', role: 'Developer · DevOps · Project Manager', image: '/projects/andronyevskaya.png',
+    text: 'ERP za tehničko održavanje objekata u kome digitalni workflow počinje fizičkom opremom. Tehničar skenira QR kod, otvara opremu i zadatak, komunicira sa menadžerom i završava posao, dok administratori upravljaju objektima, ulogama i pristupom.',
+    facts: ['WeWeb + Supabase', 'Telegram Mini App i Bot API', 'Self-hosted backend i Edge Functions']
+  },
+  {
+    id: 'exit-lead', n: '03', title: 'Exit Lead', type: 'Terenske inspekcije · dokumenti', role: 'Builder · Architect · Designer', image: '/projects/exitlead.png',
+    text: 'Terenski sistem za inspektore i klijentski portal na jednom backend-u. Workflow je uključivao rute, forme, fotografije, podatke sa mernih uređaja, automatske PDF izveštaje i posebnu migraciju približno 70.000 istorijskih izveštaja sa Google Drive-a u Supabase.',
+    facts: ['Glide + WeWeb', 'Supabase + n8n + DocsAutomator', '≈70.000 istorijskih izveštaja']
+  },
+  {
+    id: 'metafox', n: '04', title: 'MetaFox Strengths Explorer', type: 'Assessment · metodologija u razvoju', role: 'Product Owner · Full-stack Builder', image: '/projects/metafox.png',
+    text: 'Metodologija se menjala dok je proizvod nastajao: upitnik je rastao, dodat je peer feedback, a pravila interpretacije postajala su složenija. Tu promenljivu logiku preveo sam u proizvod sa stabilnim scoring-om, normalizacijom, admin alatima i vizuelnim PDF izveštajima.',
+    facts: ['64 pitanja', 'Peer feedback i deterministički scoring', 'WeWeb + Xano']
+  },
+  {
+    id: 'promptlesspress', n: '05', title: 'PromptlessPress', type: 'AI proizvod · probabilistički workflow', role: 'Builder · Architect · AI Workflow Designer', image: '/projects/promptlesspress.png',
+    text: 'Platforma za generisanje gotovih digitalnih proizvoda pomoću AI-ja. Glavni inženjerski problem nije samo povezati model, već učiniti nedeterministički proces upravljivim: sačuvano stanje generisanja, iterativno doterivanje, jasne granice između namere, izvršenja i asset-a i proverljiva SQL logika u git-u.',
+    facts: ['Supabase + WeWeb', 'OpenAI + fal.ai', 'Strukturirani promptovi, debug flow i agent guardrails']
+  }
+];
+const archive = [
+  'Dobri Visarun — visa run i automatizacija toka klijenata',
+  'Dobri Tours — izleti, rezervacije i ponovne prodaje',
+  'Educate Online — korporativni assessment sistem',
+  'Vencer Autismo — procena i smernice za porodice i stručnjake',
+  'QR Cloud — digitalne vizitkarte i dinamički QR profili',
+  'Cashdesk — interno finansijsko knjigovodstvo',
+  'French Plumbers ERP — terenski rad i dispatch',
+  'RuskaJela — lokalni marketplace domaće hrane',
+  'Serbia Networking — aplikacija za offline networking',
+  'Sefcast — SEO analytics interfejs',
+  'MommyHana MBO — klijentski i operativni portal',
+  'Business Directory — mobilni katalog organizacija',
+  'Space AI — interaktivni AI prototip',
+  'tgs.py — Telegram data alati',
+  'MakeMeLook — vizuelni product service',
+  'Flower Shop — CRM i customer workflow'
+];
+---
+<BaseLayout
+  lang="sr"
+  path="/sr/projects/"
+  title="Projekti Antona Nazarova — sistemi, proizvodi, implementacija"
+  description="Izabrani projekti Antona Nazarova u GovTech-u, ERP-u, terenskim operacijama, assessment-u i AI-ju: kontekst, lična odgovornost, arhitektura i rezultat."
+>
+  <section class="page-hero wrap">
+    <span class="section-label">Projekti / ne izložba tehnologija</span>
+    <h1>Pet sistema.<br />Pet različitih razloga <em>da budu napravljeni.</em></h1>
+    <p>Zid logotipa tehnologija ne bi rekao mnogo. Ovi projekti pokazuju početnu situaciju, za šta sam lično odgovarao i koje je inženjerske odluke trebalo doneti. Ceo arhiv je širi i znatno manje ispoliran.</p>
+  </section>
+
+  <section class="case-list wrap">
+    {cases.map(item =>
+      <article class="case" id={item.id}>
+        <div class="case-top"><span>{item.n}</span><span>{item.type}</span><span>{item.role}</span></div>
+        <div class="case-body">
+          <div><h2>{item.title}</h2><p>{item.text}</p><ul>{item.facts.map(f => <li>{f}</li>)}</ul></div>
+          <img src={item.image} alt={`${item.title} interfejs`} loading="lazy" />
+        </div>
+      </article>
+    )}
+  </section>
+
+  <section class="archive wrap">
+    <span class="section-label">Arhiv / još 16 projekata</span>
+    <h2>Ostalo ide od uspešnih poslovnih proizvoda<br />do eksperimenata iz kojih sam nešto naučio.</h2>
+    <div class="archive-grid">
+      {archive.map((name, i) => <article><span>{String(i + 6).padStart(2, '0')}</span><h3>{name}</h3></article>)}
+    </div>
+  </section>
+</BaseLayout>
