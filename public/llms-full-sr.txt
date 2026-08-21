@@ -1,0 +1,43 @@
+# Anton Nazarov (Antiokh) — prošireni srpski profil
+
+Canonical: https://antiokh.ru/
+Lokacija: Beograd, Srbija
+GitHub: https://github.com/Antiokh
+LinkedIn: https://www.linkedin.com/in/nazarovanton/
+
+Najpotpuniji detaljni profili:
+- English: https://antiokh.ru/llms-full-en.txt
+- Русский: https://antiokh.ru/llms-full.txt
+
+## Profil
+
+Anton Nazarov je tehnološki rukovodilac, sistemski arhitekta, project/product manager i hands-on developer. Profesionalno radi u IT-u od 2008. godine. Iskustvo uključuje enterprise dokumentacione sisteme, bankarstvo, javni sektor, razvoj sektorskog informacionog sistema za 100+ ustanova, Head of IT odgovornost, klijentske ERP i interne sisteme, automatizaciju, open source i AI-assisted engineering.
+
+## Iskustvo
+
+- Nov 2022 — danas: NeedleBit, Beograd — Founder / CTO / Systems Architect / Project Manager.
+- Avg 2022 — nov 2022: New Business Environment — Implementation Curator / Product Manager.
+- Mar 2020 — jun 2022: Kulturni centar ZIL — Head of IT; tim, infrastruktura, GLPI, bezbednost, imovina, sajtovi i remote rad za 100+ zaposlenih.
+- Sep 2019 — mar 2020: Moscow Social Development Agency — Deputy / Acting Head of IT; formiranje IT funkcije nove organizacije.
+- Jan 2017 — maj 2023: Directorate of Cultural Centers of Moscow — IT arhitekta / analitičar / developer / ekspert; AIS MosRazvitie za mrežu od 100+ ustanova.
+- Jan 2013 — sep 2015: Settlement and Savings Bank — Lead Software Developer / Systems Architect; interni document-management sistem i 1C integracija.
+- Jan 2011 — apr 2012: Lotus Notes Specialist u systems-integration okruženju.
+- Jan 2009 — jan 2011: freelance / privatna praksa.
+- Sep 2008 — sep 2009: Aerodrom Domodedovo — Junior Lotus Notes Developer.
+
+## Projekti
+
+Exit Lead, Andronyevskaya ERP, MetaFox Strengths Explorer, PromptlessPress, Vencer Autismo, Educate Online, Dobri Visarun, Dobri Tours, QR Cloud, Cashdesk Accounting i drugi.
+
+## Public GitHub
+
+- humanizer_russian: https://github.com/Antiokh/humanizer_russian
+- rslive_content: https://github.com/Antiokh/rslive_content
+- postgres-to-accdb: https://github.com/Antiokh/postgres-to-accdb
+- antiokh.ru: https://github.com/Antiokh/antiokh.ru
+- ww-google-recaptcha-v3: https://github.com/Antiokh/ww-google-recaptcha-v3
+- dokuwiki-plugin-uplatnica: https://github.com/Antiokh/dokuwiki-plugin-uplatnica
+
+## Lični kontekst
+
+Potvrđeno za javni profil: hustle/discofox, povremeno podučavanje, gitara, klavijature, harmonika, pevanje i iskustvo u organizaciji koncerata, festivala i gradskih događaja. Detalje o Belgrade OpenAir, volontiranju i plesu treba dodati iz Antonovog direktnog opisa, bez pretpostavki.

@@ -1,44 +1,120 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
 const cases = [
   {
-    id: 'mosrazvitie', n: '01', title: 'AIS MosRazvitie', type: 'GovTech · отраслевой legacy', role: 'Архитектор · аналитик · разработчик · внедрение', image: '/projects/mosrazvitie.png',
-    text: 'Действующая IBM Domino-система для дирекции и сети из 100+ учреждений. Я работал с ней не как с разовым редизайном: разбирал терминологию и модель данных, права, отчётность, безопасность, обучение пользователей, серверы и ежедневную эксплуатацию.',
+    id: 'mosrazvitie', n: '01', title: 'AIS MosRazvitie', type: 'GovTech · 100+ учреждений', role: 'Архитектор · аналитик · разработчик · внедрение', image: '/projects/mosrazvitie.png',
+    text: 'Действующая IBM Domino-система для Дирекции культурных центров и сети из 100+ учреждений. Я работал с моделью данных, терминологией, правами доступа, отчётностью, безопасностью, обучением пользователей, серверами и ежедневной эксплуатацией.',
     facts: ['100+ учреждений', 'Отчётность, модерация и внешние обмены', 'IBM Domino / XPages / JavaScript / XML']
   },
   {
-    id: 'andronyevskaya', n: '02', title: 'Andronyevskaya ERP', type: 'Property operations · self-hosted', role: 'Developer · DevOps · Project Manager', image: '/projects/andronyevskaya.png',
-    text: 'ERP для технической эксплуатации недвижимости, где цифровой процесс начинается с физического оборудования. Исполнитель сканирует QR, открывает карточку и задачу, общается с менеджером и закрывает работу; администратор управляет объектами, ролями и доступом.',
+    id: 'andronyevskaya', n: '02', title: 'Andronyevskaya ERP', type: 'Эксплуатация недвижимости · self-hosted', role: 'Разработка · DevOps · управление проектом', image: '/projects/andronyevskaya.png',
+    text: 'ERP для технической эксплуатации недвижимости, где цифровой процесс начинается с физического оборудования. Исполнитель сканирует QR-код, открывает карточку и задачу, общается с менеджером и закрывает работу; администратор управляет объектами, ролями и доступом.',
     facts: ['WeWeb + Supabase', 'Telegram Mini App и Bot API', 'Self-hosted backend и Edge Functions']
   },
   {
-    id: 'exit-lead', n: '03', title: 'Exit Lead', type: 'Field inspections · documents', role: 'Builder · Architect · Designer', image: '/projects/exitlead.png',
+    id: 'exit-lead', n: '03', title: 'Exit Lead', type: 'Полевые инспекции · документы', role: 'Разработка · архитектура · дизайн', image: '/projects/exitlead.png',
     text: 'Полевая система для инспекторов и клиентский портал на одном backend. Внутри — маршруты, формы, фотографии, данные измерительных приборов, автоматические PDF и отдельная миграция примерно 70 000 исторических отчётов из Google Drive в Supabase.',
     facts: ['Glide + WeWeb', 'Supabase + n8n + DocsAutomator', '≈70 000 исторических отчётов']
   },
   {
-    id: 'metafox', n: '04', title: 'MetaFox Strengths Explorer', type: 'Assessment · evolving methodology', role: 'Product Owner · Full-stack Builder', image: '/projects/metafox.png',
-    text: 'Методика менялась во время разработки: число вопросов выросло, появились peer feedback и дополнительные правила интерпретации. Я переводил эту логику в продукт со стабильным скорингом, нормализацией, админкой и визуальными PDF-отчётами.',
-    facts: ['64 вопроса', 'Peer feedback и детерминированный scoring', 'WeWeb + Xano']
+    id: 'metafox', n: '04', title: 'MetaFox Strengths Explorer', type: 'Оценка сильных сторон · методика', role: 'Ведение продукта · full-stack разработка', image: '/projects/metafox.png',
+    text: 'Методика менялась во время разработки: выросло число вопросов, появился peer feedback, усложнились правила интерпретации. Я переводил эту меняющуюся модель в продукт со стабильным расчётом результатов, нормализацией, административным интерфейсом и PDF-отчётами.',
+    facts: ['64 вопроса', 'Peer feedback и детерминированный расчёт', 'WeWeb + Xano']
   },
   {
-    id: 'promptlesspress', n: '05', title: 'PromptlessPress', type: 'AI product · probabilistic workflows', role: 'Builder · Architect · AI Workflow Designer', image: '/projects/promptlesspress.png',
-    text: 'Платформа для генерации готовых цифровых продуктов с AI. Главная инженерная задача здесь — не «подключить модель», а сделать недетерминированный процесс управляемым: хранить состояние генерации, поддерживать итерации, разносить intent, execution и assets, а критичную SQL-логику держать проверяемой в git.',
+    id: 'promptlesspress', n: '05', title: 'PromptlessPress', type: 'AI-продукт · генерационные процессы', role: 'Разработка · архитектура · AI workflow', image: '/projects/promptlesspress.png',
+    text: 'Платформа для генерации цифровых продуктов с AI. Главная инженерная задача — сделать недетерминированный процесс управляемым: хранить состояние генерации, поддерживать итерации, разделять intent, execution и assets, а критичную SQL-логику держать проверяемой в git.',
     facts: ['Supabase + WeWeb', 'OpenAI + fal.ai', 'Structured prompts, debug flow и agent guardrails']
   }
 ];
+
+const clientWork = [
+  {
+    title: 'Vencer Autismo',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/vencer_autismo',
+    text: 'Полноценная платформа оценки и рекомендаций: многоуровневые тесты, взвешенный скоринг, нормализованные результаты, radar charts, история прохождений и рекомендации, завязанные на диапазоны баллов. WeWeb + Supabase/PostgreSQL.'
+  },
+  {
+    title: 'French Plumbers ERP',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/french_plumbers_erp',
+    text: 'Внутренняя ERP для сервисного бизнеса во Франции: операционные процессы, интерфейсы сотрудников, backend и работа с файлами. Full-stack реализация на WeWeb и Supabase.'
+  },
+  {
+    title: 'Educate Online',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/educate_online',
+    text: 'Корпоративная система тестирования и анализа мнений сотрудников. Мультиязычность, расчёт больших массивов ответов, визуализация результатов и обход вычислительных ограничений Bubble; рабочая версия была собрана примерно за три недели.'
+  },
+  {
+    title: 'Dobri Visarun',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/dobri_visarun',
+    text: 'PWA для визаран-бизнеса: единая регистрация вместо Facebook, почты и мессенджеров, поездки и Telegram-уведомления. После перестройки процесса выручка выросла примерно в 10 раз за три месяца без рекламы, а ручная обработка клиентов резко сократилась.'
+  },
+  {
+    title: 'Dobri Tours',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/dobri_tours',
+    text: 'Каталог туров с записью, ценами, рейтингами, отзывами, агентскими сценариями и системой лояльности. Задача была не только в интерфейсе, но и в организации повторных продаж и более управляемой операционной работе.'
+  },
+  {
+    title: 'QR Cloud',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/qr_cloud',
+    text: 'Мобильная платформа цифровых визиток и профилей компаний: публичные страницы, QR-коды, ссылки на соцсети и мессенджеры, фирменное представление сотрудников и компаний.'
+  },
+  {
+    title: 'Cashdesk Accounting',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/cashdesk_bubble',
+    text: 'Пересборка внутреннего кассового и финансового учёта: роли кассира, аудитора и администратора, доходы, расходы, конвертация валют, CSV-выгрузки и улучшение безопасности.'
+  },
+  {
+    title: 'MommyHana MBO',
+    href: 'https://github.com/Antiokh/CV/tree/main/portfolio/mommy_hana',
+    text: 'Система продаж и бонусов с WooCommerce, клиентским и операционным кабинетом и сложной рекурсивной логикой комиссий. WeWeb + Supabase/PostgreSQL + WordPress webhooks.'
+  }
+];
+
+const githubProjects = [
+  {
+    title: 'humanizer_russian',
+    href: 'https://github.com/Antiokh/humanizer_russian',
+    stack: 'Python · CLI · rule-based linting',
+    text: 'Русский редактор и humanizer с mechanical-first проверкой. Ловит проверяемые языковые и редакторские паттерны кодом, а контекстный слой подключает только там, где механики недостаточно.'
+  },
+  {
+    title: 'rslive_content',
+    href: 'https://github.com/Antiokh/rslive_content',
+    stack: 'Astro · MDX · GitHub Actions · Cloudflare Pages',
+    text: 'Контентная база RSLive — структурированной энциклопедии о жизни и переезде в Сербию. В репозитории есть MDX-контент, семантическая индексация, правила фактчекинга и автоматическая публикация.'
+  },
+  {
+    title: 'postgres-to-accdb',
+    href: 'https://github.com/Antiokh/postgres-to-accdb',
+    stack: 'Python · PostgreSQL · SQLAlchemy · pyodbc · pandas',
+    text: 'Мост для выгрузки PostgreSQL-данных в Access .accdb или SPSS .sav, в том числе для Tableau Public: потоковый экспорт, преобразование типов, индексы и параметризованный SQL.'
+  },
+  {
+    title: 'antiokh.ru',
+    href: 'https://github.com/Antiokh/antiokh.ru',
+    stack: 'Astro · TypeScript · Cloudflare',
+    text: 'Этот сайт тоже публичный проект: статический личный профиль с мультиязычностью, структурированными данными, sitemap, LLM-readable файлами и контентом из проверяемых источников.'
+  },
+  {
+    title: 'ww-google-recaptcha-v3',
+    href: 'https://github.com/Antiokh/ww-google-recaptcha-v3',
+    stack: 'Vue · WeWeb · Google reCAPTCHA v3',
+    text: 'Публичный кастомный компонент WeWeb для интеграции Google reCAPTCHA v3.'
+  },
+  {
+    title: 'dokuwiki-plugin-uplatnica',
+    href: 'https://github.com/Antiokh/dokuwiki-plugin-uplatnica',
+    stack: 'PHP · DokuWiki',
+    text: 'Плагин DokuWiki для отрисовки сербских платёжных поручений — uplatnica.'
+  }
+];
+
 const archive = [
-  'Dobri Visarun — автоматизация визаранов и клиентского потока',
-  'Dobri Tours — экскурсии, запись и повторные продажи',
-  'Educate Online — корпоративная система assessment',
-  'Vencer Autismo — assessment и рекомендации для семей и специалистов',
-  'QR Cloud — цифровые визитки и динамические QR-профили',
-  'Cashdesk — внутренний финансовый учёт',
-  'French Plumbers ERP — выездные работы и диспетчеризация',
-  'RuskaJela — локальный marketplace домашней еды',
   'Serbia Networking — приложение для офлайн-нетворкинга',
+  'RuskaJela — локальный marketplace домашней еды',
   'Sefcast — интерфейс SEO-аналитики',
-  'MommyHana MBO — клиентский и операционный кабинет',
   'Business Directory — мобильный каталог организаций',
   'Space AI — интерактивный AI-прототип',
   'tgs.py — инструменты работы с Telegram-данными',
@@ -47,14 +123,14 @@ const archive = [
 ];
 ---
 <BaseLayout
-  title="Проекты Антона Назарова — системы, продукты и внедрение"
-  description="Выбранные проекты Антона Назарова: GovTech, ERP, field operations, assessment и AI. Контекст, личная роль, архитектурные решения и рабочий результат."
+  title="Проекты Антона Назарова — фриланс, системы, open source и pet-проекты"
+  description="Проекты Антона Назарова (Antiokh): клиентские ERP и внутренние системы, GovTech, AI, автоматизация, freelance delivery, open-source и pet-проекты на GitHub."
   path="/projects/"
 >
   <section class="page-hero wrap">
-    <span class="section-label">Проекты / не витрина технологий</span>
-    <h1>Пять систем.<br />Пять разных причин <em>их строить.</em></h1>
-    <p>Мне не очень полезно показывать двадцать логотипов технологий. Ниже — несколько проектов, где видны исходная ситуация, моя зона ответственности и инженерные решения. Полный архив шире и местами гораздо менее прилизан.</p>
+    <span class="section-label">Проекты / клиентские, собственные и open source</span>
+    <h1>Системы для клиентов.<br />Собственные продукты. <em>Код на GitHub.</em></h1>
+    <p>Здесь смешиваются три линии моей работы: крупные системы из найма, проекты для клиентов и вещи, которые я делаю потому, что мне самому нужен инструмент или интересно проверить идею. У каждого типа работы своя ценность, поэтому я не пытаюсь притвориться, что это один и тот же портфель.</p>
   </section>
 
   <section class="case-list wrap">
@@ -69,11 +145,52 @@ const archive = [
     )}
   </section>
 
+  <section class="project-index wrap">
+    <span class="section-label">Фриланс и клиентская разработка</span>
+    <div class="project-index-head">
+      <h2>Проекты, где я отвечал за рабочий результат.</h2>
+      <p>На фрилансе моя роль часто шире слова «разработчик»: приходится разбирать процесс, проектировать данные и права, собирать интерфейс и backend, подключать автоматизацию, выпускать продукт и объяснять следующему человеку, как с ним жить.</p>
+    </div>
+    <div class="project-grid">
+      {clientWork.map(item => <article class="project-card"><h3><a href={item.href}>{item.title} ↗</a></h3><p>{item.text}</p></article>)}
+    </div>
+  </section>
+
+  <section class="project-index project-index-alt wrap">
+    <span class="section-label">GitHub / open source и pet-проекты</span>
+    <div class="project-index-head">
+      <h2>Я пишу код и тогда, когда заказчика нет.</h2>
+      <p>Публичные репозитории хорошо показывают то, что трудно доказать одним резюме: как я оформляю проект, документирую решения, строю инструменты для собственных задач и довожу небольшую техническую идею до пригодного для других результата.</p>
+    </div>
+    <div class="repo-grid">
+      {githubProjects.map(item => <article class="repo-card"><p class="repo-stack">{item.stack}</p><h3><a href={item.href}>{item.title} ↗</a></h3><p>{item.text}</p></article>)}
+    </div>
+  </section>
+
   <section class="archive wrap">
-    <span class="section-label">Архив / ещё 16 проектов</span>
-    <h2>Остальное — от удачных бизнес-продуктов<br />до полезных экспериментов.</h2>
+    <span class="section-label">Ещё проекты</span>
+    <h2>Не всё требует отдельного большого кейса.</h2>
     <div class="archive-grid">
-      {archive.map((name, i) => <article><span>{String(i + 6).padStart(2, '0')}</span><h3>{name}</h3></article>)}
+      {archive.map((name, i) => <article><span>{String(i + 1).padStart(2, '0')}</span><h3>{name}</h3></article>)}
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .project-index { padding-top: 125px; padding-bottom: 125px; border-top: 1px solid var(--line); }
+  .project-index-alt { background: var(--paper-2); width: 100%; max-width: none; padding-left: max(44px, calc((100vw - 1280px) / 2 + 44px)); padding-right: max(44px, calc((100vw - 1280px) / 2 + 44px)); }
+  .project-index-head { display: grid; grid-template-columns: 1fr .8fr; gap: 8%; margin: 26px 0 58px; }
+  .project-index-head h2 { margin: 0; font: 500 clamp(38px, 4.5vw, 62px)/1.05 var(--serif); letter-spacing: -.035em; }
+  .project-index-head p { margin: 7px 0 0; color: var(--muted); line-height: 1.72; }
+  .project-grid, .repo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .project-card, .repo-card { padding: 28px 30px 32px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .project-card h3, .repo-card h3 { margin: 0 0 16px; font: 500 27px/1.18 var(--serif); }
+  .project-card h3 a:hover, .repo-card h3 a:hover { text-decoration: underline; text-underline-offset: 5px; }
+  .project-card > p, .repo-card > p:not(.repo-stack) { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+  .repo-stack { margin: 0 0 14px; color: var(--rust); font-size: 10px; line-height: 1.5; text-transform: uppercase; letter-spacing: .09em; }
+  @media (max-width: 760px) {
+    .project-index, .project-index-alt { padding-top: 80px; padding-bottom: 80px; }
+    .project-index-alt { padding-left: 24px; padding-right: 24px; }
+    .project-index-head, .project-grid, .repo-grid { grid-template-columns: 1fr; }
+  }
+</style>

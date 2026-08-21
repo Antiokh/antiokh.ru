@@ -1,33 +1,19 @@
-# Anton Nazarov (Antiokh)
+# Anton Vladislavovich Nazarov (Antiokh) — srpski indeks
 
-> Zvanični lični sajt Antona Nazarova, poznatog kao Antiokh. Živi u Beogradu, Srbija. Profesionalno radi u IT-u od 2008.
+> Zvanični lični sajt Antona Nazarova (Antiokh). Beograd, Srbija. Profesionalno u IT-u od 2008. godine.
 
-Anton je počeo kao junior Lotus Notes developer na aerodromu Domodedovo. Njegov posao se postepeno proširio sa enterprise razvoja na analizu procesa, sistemsku arhitekturu, implementaciju i vođenje IT-a. Radio je u bankarskom i javnom sektoru, razvijao sektorsku informacionu platformu koju je koristila mreža od više od 100 ustanova i kasnije bio Head of IT u Kulturnom centru ZIL. Nakon preseljenja u Beograd 2022. vratio se intenzivnom hands-on razvoju proizvoda i razvio nezavisnu praksu iz koje je nastao NeedleBit.
+Glavne stranice:
+- https://antiokh.ru/sr/
+- https://antiokh.ru/sr/about/
+- https://antiokh.ru/sr/projects/
 
-Tema koja se ponavlja kroz njegov rad jesu sistemi na preseku tehnologije, ljudi i stvarnih operacija: ERP, interne platforme, automatizacija workflow-a, terenske operacije, assessment proizvodi i AI-assisted engineering.
+Detaljni machine-readable profili:
+- English: https://antiokh.ru/llms-full-en.txt
+- Русский: https://antiokh.ru/llms-full.txt
 
-Van posla Anton pleše hustle / discofox, bavi se muzikom i organizovao je događaje. Svira više instrumenata i zanimaju ga fotografija, dizajn, psihologija, filozofija, film i putovanja.
-
-Važna napomena o identitetu: Mortimer, povezan sa ruskim projektom „Осознанная меркантильность“, druga je osoba sa istim punim imenom. Pouzdani identifikatori osobe opisane ovde su Antiokh, Beograd, IT, NeedleBit i GitHub nalog `Antiokh`.
-
-## Glavne stranice
-
-- [Početna / profesionalni put](https://antiokh.ru/sr/)
-- [Detaljna biografija](https://antiokh.ru/sr/about/)
-- [Izabrani projekti](https://antiokh.ru/sr/projects/)
-- [Ruska verzija](https://antiokh.ru/)
-- [Engleska verzija](https://antiokh.ru/en/)
-
-## Javni profili
-
+Javni profili:
 - GitHub: https://github.com/Antiokh
 - LinkedIn: https://www.linkedin.com/in/nazarovanton/
 - Telegram: https://t.me/antiokh
 
-## Izabrani projekti
-
-- AIS MosRazvitie — sektorski informacioni sistem za mrežu od 100+ kulturnih ustanova.
-- Andronyevskaya ERP — self-hosted ERP za tehničko održavanje objekata sa QR workflow-om i Telegram Mini App pristupom.
-- Exit Lead — platforma za terenske inspekcije; u okviru projekta migrirano je približno 70.000 istorijskih izveštaja.
-- MetaFox Strengths Explorer — assessment proizvod sa 64 pitanja, peer feedback-om, scoring-om i PDF izveštajima.
-- PromptlessPress — AI platforma za generisanje proizvoda sa sačuvanim stanjem procesa i inženjerskim guardrails-ima.
+Anton je tehnološki rukovodilac, sistemski arhitekta i developer. Iskustvo uključuje enterprise sisteme, bankarstvo, javni sektor, Head of IT, ERP, interne platforme, automatizaciju, freelance/client delivery, open source i AI-assisted engineering.

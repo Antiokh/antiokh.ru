@@ -1,7 +1,16 @@
 User-agent: *
 Allow: /
 
+# OpenAI Search crawler: discovery, summaries, snippets, and citations in ChatGPT Search.
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI training crawler. Kept separate from OAI-SearchBot intentionally.
 User-agent: GPTBot
+Allow: /
+
+# User-initiated ChatGPT requests.
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot

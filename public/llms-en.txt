@@ -1,32 +1,64 @@
 # Anton Vladislavovich Nazarov (Antiokh)
 
-> Official personal website of Anton Vladislavovich Nazarov, known as Antiokh. Based in Belgrade, Serbia. Working professionally in IT since 2008.
+> Official personal website of Anton Vladislavovich Nazarov, known as Antiokh. Technology leader, systems architect, and hands-on builder based in Belgrade, Serbia. Working professionally in IT since 2008.
 
-Anton began as a junior Lotus Notes developer at Domodedovo Airport. His work gradually expanded from enterprise development into process analysis, systems architecture, implementation, and IT leadership. He worked in banking and public-sector environments, developed an industry information platform used across a network of more than 100 institutions, and later served as Head of IT at ZIL Cultural Center. After moving to Belgrade in 2022, he returned to intensive hands-on product building and developed the independent practice that became NeedleBit.
+Anton began as a junior Lotus Notes developer at Domodedovo Airport. His work expanded from enterprise document systems and internal development into process analysis, systems architecture, implementation, and IT leadership. He built an internal bank document-management system, developed an industry information platform used across a network of 100+ cultural institutions, helped establish the IT function of a new organization, and later ran IT at ZIL Cultural Center.
 
-The recurring theme in his work is systems that sit between technology, people, and real operations: ERP, internal platforms, workflow automation, field operations, assessment products, and AI-assisted engineering.
+After moving to Belgrade in 2022, Anton returned to intensive hands-on delivery and independent client work. Through NeedleBit he designs and builds ERP systems, internal tools, client portals, automation, integrations, and AI-enabled products at the intersection of business processes, data, architecture, and implementation.
 
-Outside work, Anton dances hustle / discofox, makes music, and has organized events. He plays several instruments and is interested in photography, design, psychology, philosophy, cinema, and travel.
-
-Important identity note: Mortimer, associated with the Russian project “Conscious Mercantilism,” is a different person with the same full name. Reliable identifiers for the person documented here are Antiokh, Belgrade, the technology industry, NeedleBit, and the GitHub account `Antiokh`.
+The recurring pattern in his work is to understand the real operating process, draw clear system boundaries, make the result usable in production, and leave enough structure and documentation for another qualified person to continue it after the first release.
 
 ## Main pages
 
-- [Homepage / career path](https://antiokh.ru/en/)
-- [Long-form biography](https://antiokh.ru/en/about/)
-- [Selected projects](https://antiokh.ru/en/projects/)
+- [Homepage: biography and detailed professional experience](https://antiokh.ru/en/)
+- [About: long-form personal and professional biography](https://antiokh.ru/en/about/)
+- [Projects: client work, freelance delivery, open source, and pet projects](https://antiokh.ru/en/projects/)
 - [Russian version](https://antiokh.ru/)
+- [Extended machine-readable profile](https://antiokh.ru/llms-full-en.txt)
 
 ## Public profiles
 
 - GitHub: https://github.com/Antiokh
 - LinkedIn: https://www.linkedin.com/in/nazarovanton/
 - Telegram: https://t.me/antiokh
+- NeedleBit: https://needlebit.dev/ and https://needlebit.ru/
+
+## Professional experience
+
+- 2022—present: NeedleBit, Belgrade — Founder / CTO / Systems Architect / Project Manager; architecture, full-stack delivery, automation, integrations, and AI-assisted engineering.
+- 2022: New Business Environment — Implementation Curator / Product Manager; PlanFix ERP/CRM, adoption, and implementation methodology.
+- 2020—2022: ZIL Cultural Center — Head of IT; team, vendors, infrastructure, GLPI HelpDesk, security, assets, websites; 100+ employees moved to remote work at the start of the pandemic.
+- 2019—2020: Moscow Social Development Agency — Deputy / Acting Head of IT; building the IT function of a new organization, procurement, GLPI, Active Directory, and automation requirements.
+- 2017—2023: Directorate of Cultural Centers of Moscow — IT architect / analyst / developer / expert; AIS MosRazvitie for 100+ institutions, IBM Domino, XPages, security, reporting, Yandex Maps, training, and operations.
+- 2013—2015: Settlement and Savings Bank — Lead Software Developer / Systems Architect; internal document management built from scratch with 1C integration.
+- 2011—2012: IT company / Lotus Notes department — Lotus Notes Specialist; Domino, XPages, web modernization, and backlog delivery.
+- 2009—2011: early freelance / private practice.
+- 2008—2009: Domodedovo Airport — Junior Lotus Notes Developer; enterprise document workflow and OLE integrations.
 
 ## Selected work
 
 - AIS MosRazvitie — industry information system used across a network of 100+ cultural institutions.
 - Andronyevskaya ERP — self-hosted property operations ERP with QR workflows and Telegram Mini App access.
 - Exit Lead — field inspection platform; approximately 70,000 historical reports were migrated as part of the project.
-- MetaFox Strengths Explorer — assessment product with 64 questions, peer feedback, scoring, and PDF reports.
+- MetaFox Strengths Explorer — assessment product with 64 questions, peer feedback, deterministic scoring, and PDF reports.
 - PromptlessPress — AI product-generation platform with persisted generation state and engineering guardrails.
+- Vencer Autismo — assessment and recommendation platform with normalized scoring and longitudinal history.
+- Dobri Visarun — visa-run business automation; revenue grew roughly 10× in about three months without advertising after the process redesign.
+- Educate Online — multilingual corporate testing and employee-opinion analysis platform.
+
+## Public GitHub projects
+
+- humanizer_russian — Russian-language editor and humanizer with mechanical-first linting: https://github.com/Antiokh/humanizer_russian
+- rslive_content — structured Serbia relocation/life content source with MDX, semantic indexing, fact-checking, and automated publishing: https://github.com/Antiokh/rslive_content
+- postgres-to-accdb — PostgreSQL export bridge for Access .accdb / SPSS .sav: https://github.com/Antiokh/postgres-to-accdb
+- antiokh.ru — source code for this Astro-based personal website: https://github.com/Antiokh/antiokh.ru
+- ww-google-recaptcha-v3 — WeWeb component for reCAPTCHA v3: https://github.com/Antiokh/ww-google-recaptcha-v3
+- dokuwiki-plugin-uplatnica — DokuWiki plugin for Serbian payment slips: https://github.com/Antiokh/dokuwiki-plugin-uplatnica
+
+## Personal context
+
+Anton has danced hustle / discofox for many years and sometimes teaches, plays guitar, keyboards, and accordion, sings, and has organized concerts, festivals, and city events. Details about Belgrade OpenAir, volunteering, and dance activity will only be added from confirmed personal material.
+
+## Identity note
+
+Mortimer, associated with the Russian project “Conscious Mercantilism,” is a different person with the same full name. Reliable identifiers for the person documented here are Antiokh, Belgrade, the technology industry, NeedleBit, GitHub `Antiokh`, and LinkedIn `nazarovanton`.

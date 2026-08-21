@@ -2,14 +2,37 @@
 import type { HomeContent } from '../data/home';
 import HeroBlock from './blocks/HeroBlock.astro';
 import StoryBlock from './blocks/StoryBlock.astro';
+import ExperienceBlock from './blocks/ExperienceBlock.astro';
 import SerbiaBlock from './blocks/SerbiaBlock.astro';
 import PortfolioBlock from './blocks/PortfolioBlock.astro';
 import NeedleBitBlock from './blocks/NeedleBitBlock.astro';
 import PersonalBlock from './blocks/PersonalBlock.astro';
-const { content } = Astro.props as { content: HomeContent };
+const { content } = Astro.props as { content: HomeContent & { lang: 'ru' | 'en' | 'sr' } };
+
+const personName = content.lang === 'ru' ? 'Антон Владиславович Назаров' : 'Anton Vladislavovich Nazarov';
+const profileSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `https://antiokh.ru${content.meta.path}#profile`,
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://antiokh.ru/#anton-nazarov',
+    name: personName,
+    alternateName: ['Anton Nazarov', 'Антон Назаров', 'Antiokh'],
+    description: content.meta.description,
+    image: 'https://antiokh.ru/og-image.png',
+    url: 'https://antiokh.ru/',
+    sameAs: [
+      'https://github.com/Antiokh',
+      'https://www.linkedin.com/in/nazarovanton/'
+    ]
+  }
+};
 ---
+<script is:inline type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>
 <HeroBlock {content} />
 <StoryBlock {content} />
+<ExperienceBlock lang={content.lang} />
 <SerbiaBlock {content} />
 <PortfolioBlock {content} />
 <NeedleBitBlock {content} />

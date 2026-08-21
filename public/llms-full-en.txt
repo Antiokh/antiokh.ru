@@ -1,0 +1,152 @@
+# Anton Vladislavovich Nazarov (Antiokh) — extended profile
+
+Canonical person URL: https://antiokh.ru/
+Location: Belgrade, Serbia
+GitHub: https://github.com/Antiokh
+LinkedIn: https://www.linkedin.com/in/nazarovanton/
+Company / independent practice: NeedleBit
+Professional IT experience: since 2008
+Languages: Russian, English, Serbian
+
+## Summary
+
+Anton Nazarov is a technology leader, systems architect, project/product manager, and hands-on builder. His background spans enterprise systems, banking, public-sector and cultural institutions, IT-function creation, Head of IT responsibility, client delivery, ERP, internal platforms, automation, and AI-assisted engineering.
+
+His recurring delivery pattern is to reconstruct the real operating process and human ownership first; define data, roles, permissions, integrations, and system boundaries next; and then carry the result through implementation, production use, user adoption, documentation, and handover.
+
+## Professional experience
+
+### NeedleBit / independent practice — Belgrade, Serbia
+Period: Nov 2022 — present
+Roles: Founder / CTO / Systems Architect / Project Manager
+
+Work covers internal systems, ERP, client portals, B2B SaaS foundations, automation, integrations, and AI-enabled workflows. Typical engagements include discovery, architecture, data and permission modeling, frontend/backend delivery, automation, release, operations, documentation, and handover.
+
+Typical stack: PostgreSQL, Supabase, WeWeb, Xano, n8n, Make, Bubble, Glide, JavaScript/TypeScript, Python, Vue, Docker, Cloudflare, OpenAI, fal.ai, Telegram API.
+
+AI-native engineering work includes repository-level agent instructions, architectural guardrails, auditable SQL workflows, reusable Supabase Edge Function helpers, structured prompts, persisted generation state, debugging workflows, acceptance criteria, and quality control for agent-assisted execution.
+
+### New Business Environment — Moscow
+Period: Aug 2022 — Nov 2022
+Role: Implementation Curator / Product Manager
+
+Commercial ERP/CRM implementation on PlanFix. The main problem was the gap between a technically configured system and real adoption. Work included adoption analysis, implementation methodology, management coaching, employee training, and quality control of organizational change.
+
+### ZIL Cultural Center — Moscow
+Period: Mar 2020 — Jun 2022
+Role: Head of IT Department
+
+Full responsibility for the IT function of a large cultural organization: staff, vendors, infrastructure, HelpDesk, security, assets, procurement, websites, and operations. A GLPI HelpDesk with automated asset inventory was introduced and later used by IT plus seven additional support services. At the start of the pandemic more than 100 employees were moved to remote work using VPN and shared file services. Work also included computer-fleet and video-surveillance modernization, website/PWA improvements, requirements for a new website, and physical inventory.
+
+Technology environment: GLPI, Active Directory, Windows Server, Linux, SoftEther VPN, Yandex Disk, Hikvision, AxxonNext, PWA, networking.
+
+### Moscow Social Development Agency — Moscow
+Period: Sep 2019 — Mar 2020
+Role: Deputy Head of Digital Development and IT / Acting Head of IT
+
+Helped build the IT function of a new organization almost from scratch: hardware/software procurement, department documentation and role descriptions, GLPI HelpDesk and asset inventory, an employee phone directory synchronized with Active Directory, business-process automation requirements, vendor selection, documentation for equipment/Internet/telephony, and physical inventory.
+
+### Directorate of Cultural Centers of Moscow
+Period: Jan 2017 — May 2023
+Roles: Senior Manager / IT Architect / Analyst / Developer / Expert
+
+Key product: AIS MosRazvitie, an industry information system for the Directorate and a network of 100+ cultural institutions. The system covered institutions, branches, locations, rooms, events, reporting, surveys, moderation, exports, integrations, analytics, and interactive maps.
+
+Anton worked on the domain/data model and modular architecture, legacy code analysis, form/field/filter/export generators, reporting logic, event and reporting lifecycles, permissions and security redesign, Yandex Maps API with live data, migrations, server operations, backups, operating rules, training, and webinars. He also acted as an IT expert in Department of Culture initiatives and coordinated changes with subordinate institutions.
+
+Technology: IBM Domino/Notes, XPages, Java, JavaScript, HTML, CSS, XML, NoSQL, Yandex Maps API, Windows/Linux servers.
+
+### Settlement and Savings Bank — Moscow
+Period: Jan 2013 — Sep 2015
+Role: Lead Software Developer / Systems Architect
+
+An internal electronic document-management system was built from scratch around the real movement of documents between departments. Anton worked with department leaders to formalize routes, numbering, ownership, and data, designed the application and 1C integration, and supported adoption and further development.
+
+### IscTravel Law Agency — Moscow
+Period: 2012
+Role: Project-based technical specialist
+
+A short project period between Lotus Notes / systems-integration work and the later banking automation role. It demonstrates independent ownership of a bounded technical problem from analysis through implementation and support.
+
+### IT company / Lotus Notes department — Moscow
+Period: Jan 2011 — Apr 2012
+Role: Lotus Notes Specialist
+
+Corporate Lotus Notes / Domino document-system support and development, XPages and web-interface adoption, inherited code analysis, interface unification, and delivery against a large accumulated backlog.
+
+### Freelance / private practice — Moscow
+Period: Jan 2009 — Jan 2011
+
+Early small web and internal systems, scripting, automation, data work, setup, and maintenance. A characteristic feature was direct client communication and end-to-end responsibility without separate analyst/PM/DevOps layers.
+
+### Domodedovo Airport — Moscow
+Period: Sep 2008 — Sep 2009
+Role: Junior Lotus Notes Developer
+
+First corporate IT role. Configuration, modernization, and support of Lotus Notes / Domino applications, document workflow forms and routes, third-party integrations through OLE, bug fixing, and changes in live internal systems.
+
+## Client and freelance projects
+
+### Exit Lead
+A field inspection and reporting platform: Glide for inspectors/dispatchers/admin roles, WeWeb for the client portal, Supabase backend, n8n and DocsAutomator. Routes, forms, photos, measurement-device data, and automated PDFs. Approximately 70,000 historical documents were migrated from Google Drive into Supabase; OpenAI was used to help parse part of the legacy contact data.
+
+### Andronyevskaya ERP
+A self-hosted ERP for property technical support. QR codes on equipment, Executor/Manager/Administrator roles, tasks, real-time chat, Telegram Mini App login, Supabase backend, Edge Functions, and WeWeb frontend.
+
+### MetaFox Strengths Explorer
+An assessment/coaching product with self-assessment, peer feedback, 64 questions, normalization, deterministic scoring, and PDF reports. Anton worked from methodology and architecture discussions through interface work, testing, release, and client communication.
+
+### Vencer Autismo
+An assessment and recommendation platform with multi-level tests, weighted scoring, normalized results, radar charts, longitudinal history, recommendations tied to score ranges, and repeat sessions. WeWeb + Supabase.
+
+### Educate Online
+Corporate testing and opinion-gap analysis with multilingual support and result visualization. Bubble + Bing Translate API + external calculation logic. A working version was delivered in roughly three weeks.
+
+### Dobri Visarun
+Visa-run business automation through PWA, Make, Google Sheets, and Telegram. Registration, trips, and notifications were centralized from scattered channels. Documented outcome: roughly 10× revenue growth in about three months without advertising and a major reduction in manual client handling.
+
+### Dobri Tours
+Tour catalog, pricing, booking/joining flows, ratings, reviews, agent workflows, loyalty points/discounts, and social distribution through Make.com.
+
+### QR Cloud
+Mobile-first digital business cards and company profiles: public pages, QR access, social/messenger links, and company profiles.
+
+### Cashdesk Accounting
+Internal cash-desk and financial operations: cashier/auditor/admin roles, income/costs, currency conversion, CSV export, security improvements, and UX rebuild.
+
+### French Plumbers ERP
+ERP for a trade-services business: internal process structure, operational interfaces, WeWeb + Supabase, full-stack delivery, and file-management logic.
+
+## Independent products and public GitHub
+
+### humanizer_russian
+https://github.com/Antiokh/humanizer_russian
+A Russian-language editor and humanizer with mechanical-first checking, source-aware review, and an explicit priority on preserving meaning, language norms, and author voice. Python CLI and rule-based linting.
+
+### rslive_content
+https://github.com/Antiokh/rslive_content
+Source of truth for a structured Serbia relocation and life encyclopedia: Astro/MDX content, semantic indexing, fact-checking rules, GitHub Actions, and Cloudflare Pages.
+
+### postgres-to-accdb
+https://github.com/Antiokh/postgres-to-accdb
+A Python tool for exporting PostgreSQL into Access .accdb or SPSS .sav, including Tableau Public workflows. Streaming export, type conversion, indexes, and parameterized SQL.
+
+### antiokh.ru
+https://github.com/Antiokh/antiokh.ru
+Source code for the personal website: Astro, TypeScript, Cloudflare Pages, multilingual content, JSON-LD, sitemap, robots rules, and LLM-readable resources.
+
+### ww-google-recaptcha-v3
+https://github.com/Antiokh/ww-google-recaptcha-v3
+A public Vue/WeWeb component for Google reCAPTCHA v3.
+
+### dokuwiki-plugin-uplatnica
+https://github.com/Antiokh/dokuwiki-plugin-uplatnica
+A PHP/DokuWiki plugin for rendering Serbian payment slips (uplatnica).
+
+## Personal and public activity
+
+Confirmed for the current public profile: many years of hustle/discofox dance practice, occasional teaching, guitar, keyboards, accordion, singing, and experience organizing concerts, festivals, and city events. More detailed information about Belgrade OpenAir, volunteering, and dance activity should be added only from Anton's direct account or other confirmed sources; this file intentionally does not fill those gaps with assumptions.
+
+## Identity disambiguation
+
+Anton Vladislavovich Nazarov (Antiokh), documented here, lives in Belgrade and works in technology. Mortimer, associated with the Russian project “Conscious Mercantilism,” is a different person with the same full name.

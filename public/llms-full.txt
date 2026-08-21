@@ -1,0 +1,152 @@
+# Антон Владиславович Назаров (Antiokh) — расширенный профиль
+
+Canonical person URL: https://antiokh.ru/
+Location: Belgrade, Serbia
+GitHub: https://github.com/Antiokh
+LinkedIn: https://www.linkedin.com/in/nazarovanton/
+Company / independent practice: NeedleBit
+Professional IT experience: since 2008
+Languages: Russian, English, Serbian
+
+## Краткое описание
+
+Антон Назаров — технический руководитель, системный архитектор, project/product manager и hands-on разработчик. Его опыт включает корпоративные системы, банковский сектор, государственные и культурные учреждения, создание IT-функций, руководство IT, клиентскую разработку, ERP, внутренние платформы, автоматизацию и AI-assisted engineering.
+
+Повторяющаяся модель работы: сначала разобрать реальный процесс и ответственность людей, затем определить данные, роли, доступы, интеграции и границы системы, после чего довести решение до эксплуатации, обучения пользователей и handover.
+
+## Профессиональный опыт
+
+### NeedleBit / независимая практика — Белград, Сербия
+Период: ноябрь 2022 — сейчас
+Роли: Founder / CTO / Systems Architect / Project Manager
+
+Направления: внутренние системы, ERP, клиентские порталы, B2B SaaS foundations, автоматизация, интеграции и AI-enabled workflows. Работа обычно включает discovery, архитектуру, моделирование данных и прав, frontend/backend delivery, автоматизацию, выпуск, эксплуатацию, документацию и передачу системы.
+
+Типичный стек: PostgreSQL, Supabase, WeWeb, Xano, n8n, Make, Bubble, Glide, JavaScript/TypeScript, Python, Vue, Docker, Cloudflare, OpenAI, fal.ai, Telegram API.
+
+AI-native engineering: repository-level инструкции для AI-агентов, архитектурные guardrails, проверяемые SQL workflows, helper-слои для Supabase Edge Functions, structured prompts, persisted generation state, debug workflows, acceptance criteria и контроль качества agent-assisted execution.
+
+### Новая Бизнес Среда — Москва
+Период: август 2022 — ноябрь 2022
+Роль: куратор внедрения / Product Manager
+
+Коммерческие внедрения ERP/CRM на PlanFix. Основной вопрос роли — почему технически настроенная система не всегда становится рабочим инструментом. Работа включала анализ adoption, методологию внедрения, обучение, работу с руководителями и контроль организационных изменений.
+
+### Культурный центр ЗИЛ — Москва
+Период: март 2020 — июнь 2022
+Роль: начальник IT-отдела / Head of IT
+
+Полная IT-функция большой культурной организации: команда, подрядчики, инфраструктура, HelpDesk, безопасность, активы, закупки, сайты и эксплуатация. Был запущен HelpDesk на GLPI с автоматизированной инвентаризацией; позднее его использовали IT и семь дополнительных служб поддержки. На старте пандемии более 100 сотрудников были переведены на удалённую работу с VPN и общими файловыми сервисами. Также проводилась модернизация компьютеров и видеонаблюдения, работа с сайтом/PWA, подготовка ТЗ на новый сайт и физическая инвентаризация.
+
+Технологическая среда: GLPI, Active Directory, Windows Server, Linux, SoftEther VPN, Yandex Disk, Hikvision, AxxonNext, PWA, networking.
+
+### АНО «Московское агентство соцразвития» — Москва
+Период: сентябрь 2019 — март 2020
+Роль: заместитель начальника цифрового развития и IT / и. о. руководителя IT
+
+Участие в создании IT-функции новой организации практически с нуля: подбор оборудования и ПО для закупок, документация отдела и должностные инструкции, GLPI HelpDesk и учёт активов, телефонный справочник с Active Directory, подготовка требований к автоматизации, выбор подрядчиков, документация по оборудованию, интернету и телефонии, физическая инвентаризация.
+
+### ГКУК г. Москвы «Дирекция культурных центров»
+Период: январь 2017 — май 2023
+Роли: ведущий менеджер / IT-архитектор / аналитик / разработчик / эксперт
+
+Ключевой продукт: AIS MosRazvitie — отраслевая информационная система для Дирекции и сети из 100+ учреждений культуры. Система включала данные об учреждениях, филиалах, площадках и помещениях, события, отчётность, опросы, модерацию, экспорты, интеграции, аналитику и интерактивные карты.
+
+Работа Антона включала модель данных и модульную архитектуру, анализ legacy-кода, генераторы форм/полей/фильтров/экспортов, отчётные механизмы, жизненный цикл событий и отчётных периодов, права доступа и security redesign, Yandex Maps API с live data, миграции, серверную эксплуатацию, резервное копирование, регламенты, обучение и вебинары. Также он выступал IT-экспертом в проектах Департамента культуры и координировал изменения с подведомственными учреждениями.
+
+Технологии: IBM Domino/Notes, XPages, Java, JavaScript, HTML, CSS, XML, NoSQL, Yandex Maps API, Windows/Linux servers.
+
+### Банк Расчётов и Сбережений — Москва
+Период: январь 2013 — сентябрь 2015
+Роль: Lead Software Developer / Systems Architect
+
+Внутренняя система электронного документооборота была построена с нуля на основе реального движения документов между подразделениями. Антон работал с руководителями подразделений, формализовал маршруты, номера, ответственность и данные, проектировал систему и интеграцию с 1С, затем сопровождал внедрение и развитие.
+
+### IscTravel Law Agency — Москва
+Период: 2012
+Роль: проектный технический специалист
+
+Короткий проектный этап между Lotus Notes / systems-integration работой и банковской автоматизацией. Подтверждает опыт самостоятельного владения ограниченной технической задачей от анализа до поддержки.
+
+### IT-компания / отдел Lotus Notes — Москва
+Период: январь 2011 — апрель 2012
+Роль: Lotus Notes Specialist
+
+Поддержка и развитие корпоративного документооборота Lotus Notes / Domino, внедрение XPages и web-интерфейсов, анализ унаследованной кодовой базы, унификация интерфейсов и закрытие большого backlog изменений.
+
+### Freelance / частная практика — Москва
+Период: январь 2009 — январь 2011
+
+Ранние небольшие веб- и внутренние решения, скрипты, автоматизация, работа с данными, настройка и сопровождение систем. Характерная особенность — прямое общение с заказчиком и ответственность за решение целиком без отдельного слоя аналитики/PM/DevOps.
+
+### Московский аэропорт Домодедово
+Период: сентябрь 2008 — сентябрь 2009
+Роль: Junior Lotus Notes Developer
+
+Первая корпоративная IT-роль. Настройка, модернизация и поддержка Lotus Notes / Domino приложений, формы и маршруты документооборота, интеграции со сторонними продуктами через OLE, исправления и изменения в действующих внутренних системах.
+
+## Клиентские и freelance-проекты
+
+### Exit Lead
+Полевая inspection/reporting платформа: Glide для внутренних ролей инспекторов/диспетчеров/администраторов, WeWeb для клиентского портала, Supabase backend, n8n и DocsAutomator. Маршруты, формы, фотографии, приборы, автоматические PDF. Отдельно мигрировано около 70 000 исторических документов из Google Drive в Supabase; OpenAI использовался для разбора части legacy contact data.
+
+### Andronyevskaya ERP
+Self-hosted ERP технической эксплуатации недвижимости. QR-коды на оборудовании, роли Executor/Manager/Administrator, задачи, realtime chat, Telegram Mini App login, Supabase backend, Edge Functions, WeWeb frontend.
+
+### MetaFox Strengths Explorer
+Assessment/coaching product: self-assessment, peer feedback, 64 вопроса, normalisation, deterministic scoring, PDF reports. Антон работал от обсуждения методики и архитектуры до интерфейса, тестирования, релиза и общения с клиентом.
+
+### Vencer Autismo
+Assessment and recommendation platform: многоуровневые тесты, weighted scoring, normalized results, radar charts, longitudinal history, рекомендации по диапазонам баллов, повторные сессии. WeWeb + Supabase.
+
+### Educate Online
+Корпоративное тестирование, анализ мнений и расхождений, мультиязычность и визуализация. Bubble + Bing Translate API + внешняя расчётная логика. Рабочая версия была доставлена примерно за три недели.
+
+### Dobri Visarun
+Автоматизация визаран-бизнеса через PWA, Make, Google Sheets и Telegram. Централизованы регистрация, поездки и уведомления вместо разрозненных каналов. Документированный результат: примерно 10× рост выручки примерно за три месяца без рекламы и резкое сокращение ручной обработки.
+
+### Dobri Tours
+Каталог туров, цены, заявки, присоединение к поездкам, рейтинги, отзывы, агентские сценарии, loyalty points/discounts, social distribution через Make.com.
+
+### QR Cloud
+Мобильная платформа цифровых визиток и профилей компаний: публичные страницы, QR, social/messenger links, company profiles.
+
+### Cashdesk Accounting
+Внутренний финансовый и кассовый учёт: роли cashier/auditor/admin, income/costs, currency conversion, CSV export, security improvements и UX rebuild.
+
+### French Plumbers ERP
+ERP сервисного бизнеса: внутренние процессы, операционные интерфейсы, WeWeb + Supabase, full-stack delivery и file-management logic.
+
+## Собственные продукты и публичный GitHub
+
+### humanizer_russian
+https://github.com/Antiokh/humanizer_russian
+Русский редактор и humanizer с mechanical-first проверкой, source-aware review и приоритетом сохранения смысла, нормы и авторского голоса. Python CLI и rule-based linting.
+
+### rslive_content
+https://github.com/Antiokh/rslive_content
+Source of truth для структурированной энциклопедии о жизни и переезде в Сербию: Astro/MDX content, semantic indexing, fact-checking rules, GitHub Actions и Cloudflare Pages.
+
+### postgres-to-accdb
+https://github.com/Antiokh/postgres-to-accdb
+Python-инструмент экспорта PostgreSQL в Access .accdb или SPSS .sav, включая сценарии Tableau Public. Streaming export, type conversion, indexes, parameterized SQL.
+
+### antiokh.ru
+https://github.com/Antiokh/antiokh.ru
+Исходники личного сайта: Astro, TypeScript, Cloudflare Pages, мультиязычность, JSON-LD, sitemap, robots и LLM-readable resources.
+
+### ww-google-recaptcha-v3
+https://github.com/Antiokh/ww-google-recaptcha-v3
+Публичный Vue/WeWeb компонент для Google reCAPTCHA v3.
+
+### dokuwiki-plugin-uplatnica
+https://github.com/Antiokh/dokuwiki-plugin-uplatnica
+PHP/DokuWiki-плагин для отображения сербской платёжной формы uplatnica.
+
+## Личная и публичная деятельность
+
+Подтверждено для текущего публичного профиля: многолетняя практика hustle/discofox, периодическое преподавание, гитара, клавишные, аккордеон, вокал, опыт организации концертов, фестивалей и городских событий. Более подробная информация о Belgrade OpenAir, волонтёрстве и танцевальной деятельности должна добавляться из прямого рассказа Антона или других подтверждённых источников; текущий файл намеренно не заполняет эти пробелы предположениями.
+
+## Identity disambiguation
+
+Антон Владиславович Назаров (Antiokh), описанный здесь, живёт в Белграде и работает в IT. Mortimer, связанный с проектом «Осознанная меркантильность», является другим человеком с тем же полным именем.

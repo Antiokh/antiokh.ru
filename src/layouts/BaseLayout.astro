@@ -21,33 +21,34 @@ const enPath = localePath('en');
 const srPath = localePath('sr');
 const homePath = localePath(lang).replace(suffix, '/') || '/';
 const aboutPath = lang === 'ru' ? '/about/' : `/${lang}/about/`;
+const projectsPath = lang === 'ru' ? '/projects/' : `/${lang}/projects/`;
 
 const copy = {
   ru: {
     personName: 'Антон Владиславович Назаров',
-    description: 'Технологический руководитель и системный архитектор из Белграда. Профессионально в IT с 2008 года: enterprise, банковские и государственные системы, Head of IT, собственные продукты и NeedleBit.',
+    description: 'Технический руководитель и системный архитектор из Белграда. Профессионально в IT с 2008 года: корпоративные, банковские и государственные системы, Head of IT, клиентская разработка, open source и NeedleBit.',
     siteName: 'Антон Назаров (Antiokh) — личный сайт',
     homeLabel: 'Антон Назаров — на главную',
     navLabel: 'Основная навигация',
-    path: 'Путь', projects: 'Проекты', personal: 'Вне работы', about: 'Обо мне', contact: 'Написать',
+    path: 'Путь', experience: 'Опыт', projects: 'Проекты', personal: 'Вне работы', about: 'Обо мне', contact: 'Написать',
     footer: 'Белград, Сербия', systems: 'systems / people / products'
   },
   en: {
     personName: 'Anton Vladislavovich Nazarov',
-    description: 'Technology leader and systems architect based in Belgrade. Working professionally in IT since 2008 across enterprise, banking, public-sector systems, IT leadership, independent products, and NeedleBit.',
+    description: 'Technology leader and systems architect based in Belgrade. Working professionally in IT since 2008 across enterprise, banking, public-sector systems, IT leadership, client delivery, open source, and NeedleBit.',
     siteName: 'Anton Nazarov (Antiokh) — personal website',
     homeLabel: 'Anton Nazarov — home',
     navLabel: 'Main navigation',
-    path: 'Path', projects: 'Projects', personal: 'Beyond work', about: 'About', contact: 'Write to me',
+    path: 'Path', experience: 'Experience', projects: 'Projects', personal: 'Beyond work', about: 'About', contact: 'Write to me',
     footer: 'Belgrade, Serbia', systems: 'systems / people / products'
   },
   sr: {
     personName: 'Anton Vladislavovich Nazarov',
-    description: 'Tehnološki rukovodilac i sistemski arhitekta iz Beograda. Profesionalno u IT-u od 2008: enterprise, bankarski i javni sistemi, vođenje IT-a, sopstveni proizvodi i NeedleBit.',
+    description: 'Tehnološki rukovodilac i sistemski arhitekta iz Beograda. Profesionalno u IT-u od 2008: enterprise, bankarski i javni sistemi, vođenje IT-a, klijentski projekti, open source i NeedleBit.',
     siteName: 'Anton Nazarov (Antiokh) — lični sajt',
     homeLabel: 'Anton Nazarov — početna',
     navLabel: 'Glavna navigacija',
-    path: 'Put', projects: 'Projekti', personal: 'Van posla', about: 'O meni', contact: 'Piši mi',
+    path: 'Put', experience: 'Iskustvo', projects: 'Projekti', personal: 'Van posla', about: 'O meni', contact: 'Piši mi',
     footer: 'Beograd, Srbija', systems: 'sistemi / ljudi / proizvodi'
   }
 } as const;
@@ -69,10 +70,22 @@ const schema = {
       knowsLanguage: ['ru', 'en', 'sr'],
       sameAs: [
         'https://github.com/Antiokh',
-        'https://www.linkedin.com/in/nazarovanton/'
+        'https://www.linkedin.com/in/nazarovanton/',
+        'https://t.me/antiokh'
       ],
-      worksFor: { '@type': 'Organization', name: 'NeedleBit' },
-      knowsAbout: ['Engineering management', 'Systems architecture', 'Product delivery', 'Business process automation', 'AI-assisted development', 'Supabase', 'PostgreSQL']
+      worksFor: { '@type': 'Organization', name: 'NeedleBit', url: 'https://needlebit.dev/' },
+      knowsAbout: [
+        'Technology leadership',
+        'Systems architecture',
+        'Enterprise systems',
+        'Digital transformation',
+        'Product delivery',
+        'Business process automation',
+        'AI-assisted development',
+        'PostgreSQL',
+        'Supabase',
+        'Workflow automation'
+      ]
     },
     {
       '@type': 'WebSite',
@@ -116,7 +129,8 @@ const schema = {
       </a>
       <nav aria-label={t.navLabel}>
         <a href={`${homePath}#story`}>{t.path}</a>
-        <a href={`${homePath}#portfolio`}>{t.projects}</a>
+        <a href={`${homePath}#experience`}>{t.experience}</a>
+        <a href={projectsPath}>{t.projects}</a>
         <a href={`${homePath}#personal`}>{t.personal}</a>
         <a href={aboutPath}>{t.about}</a>
       </nav>
