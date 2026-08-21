@@ -2,13 +2,18 @@
 import { experience, type ExperienceLocale } from '../../data/experience';
 const { lang } = Astro.props as { lang: ExperienceLocale };
 const content = experience[lang];
+const intro = {
+  ru: 'Часть ролей шла параллельно, поэтому периоды пересекаются. Здесь я оставил детали, которые обычно приходится вырезать из резюме: контекст, реальные задачи, зона ответственности и техническая среда.',
+  en: 'Some roles overlapped, so the dates overlap too. This section keeps the context a normal résumé has to cut: the actual problem, the scope of responsibility, the work performed, and the technical environment.',
+  sr: 'Neke uloge su se odvijale paralelno, zato se periodi preklapaju. Ovde ostavljam kontekst koji obično ne stane u CV: stvarni problem, odgovornost, posao i tehničko okruženje.'
+}[lang];
 ---
 <section id="experience" class="experience-section wrap">
   <div class="experience-head">
     <span class="section-label">{content.label}</span>
     <div>
       <h2>{content.title}</h2>
-      <p>{content.intro}</p>
+      <p>{intro}</p>
     </div>
   </div>
 
