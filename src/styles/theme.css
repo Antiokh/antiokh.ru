@@ -1,22 +1,89 @@
 :root {
-  --ink: #191b1e;
-  --paper: #f2f3f1;
-  --paper-2: #e6e8e6;
-  --paper-3: #d8dcda;
-  --acid: #e4f06a;
-  --rust: #b45b46;
-  --green: #557069;
-  --line: rgba(25, 27, 30, .17);
-  --line-light: rgba(242, 243, 241, .18);
-  --muted: #666b69;
-  --muted-light: #b9bdbc;
+  color-scheme: dark;
+  --ink: #f2ffff;
+  --paper: #003443;
+  --paper-2: #064553;
+  --paper-3: #0a5260;
+  --acid: #01ffff;
+  --rust: #ff3b30;
+  --super: #ff3b30;
+  --green: #01ffff;
+  --line: rgba(242, 255, 255, .18);
+  --line-light: rgba(242, 255, 255, .2);
+  --muted: #a9c5ca;
+  --muted-light: #d2e3e6;
 }
 
-/* The product screenshots are mostly blue/green. Keep the site around them neutral. */
-.serbia-block { background: #e5e8e6; }
-.serbia-projects article { background: #eef0ee; }
-.needlebit-chapter { background: #22272a; }
-.prose p { color: #484d4c; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Keep large surfaces in the same blue-green family as the portfolio previews. */
+.site-header {
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+}
+
+.dark-section,
+footer {
+  background: #002630;
+  color: var(--ink);
+}
+
+.serbia-block {
+  background: #043b48;
+}
+
+.serbia-projects {
+  background: var(--line);
+}
+
+.serbia-projects article {
+  background: #074652;
+}
+
+.real-work {
+  background: var(--paper);
+}
+
+.needlebit-chapter {
+  background: #002630;
+}
+
+.bio-card {
+  background: var(--paper-2);
+}
+
+.prose p,
+.needlebit-grid > div:last-child > p:not(.chapter-lead) {
+  color: var(--muted);
+}
+
+/* Cyan is the working accent. Red is deliberately reserved for sparse, high-salience marks. */
+.wordmark > span,
+.feature-visual span,
+.button.acid {
+  background: var(--acid);
+  color: #002d38;
+  border-color: var(--acid);
+}
+
+.status-dot {
+  background: var(--acid);
+  box-shadow: 0 0 0 3px rgba(1, 255, 255, .12);
+}
+
+.button.solid {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible,
+.experience-item summary:focus-visible {
+  outline-color: var(--super);
+}
 
 /* Portfolio assets are authored as 4:3. Preserve that frame instead of cropping them to ad-hoc heights. */
 .feature-visual,
@@ -40,6 +107,20 @@
   height: 100%;
 }
 
+.feature-visual,
 .case-body img {
-  box-shadow: 0 8px 30px rgba(25, 27, 30, .08);
+  box-shadow: 0 10px 38px rgba(0, 18, 24, .28);
+}
+
+.portrait {
+  background: var(--paper-3);
+  box-shadow: 0 16px 50px rgba(0, 18, 24, .32);
+}
+
+.portrait:after {
+  border-color: rgba(1, 255, 255, .32);
+}
+
+.bio-portrait {
+  background: var(--paper-3);
 }
