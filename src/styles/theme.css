@@ -68,7 +68,7 @@ footer {
 }
 
 /* Cyan is the working accent. Red is deliberately reserved for sparse, high-salience marks. */
-.wordmark > span,
+.wordmark > span:first-child,
 .feature-visual span,
 .button.acid {
   background: var(--acid);
