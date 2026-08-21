@@ -1,0 +1,45 @@
+:root {
+  --ink: #191b1e;
+  --paper: #f2f3f1;
+  --paper-2: #e6e8e6;
+  --paper-3: #d8dcda;
+  --acid: #e4f06a;
+  --rust: #b45b46;
+  --green: #557069;
+  --line: rgba(25, 27, 30, .17);
+  --line-light: rgba(242, 243, 241, .18);
+  --muted: #666b69;
+  --muted-light: #b9bdbc;
+}
+
+/* The product screenshots are mostly blue/green. Keep the site around them neutral. */
+.serbia-block { background: #e5e8e6; }
+.serbia-projects article { background: #eef0ee; }
+.needlebit-chapter { background: #22272a; }
+.prose p { color: #484d4c; }
+
+/* Portfolio assets are authored as 4:3. Preserve that frame instead of cropping them to ad-hoc heights. */
+.feature-visual,
+.serbia-image {
+  aspect-ratio: 4 / 3;
+  min-height: 0;
+}
+
+.feature-visual img,
+.serbia-image img,
+.case-body img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-3);
+}
+
+.feature-visual img,
+.serbia-image img {
+  height: 100%;
+}
+
+.case-body img {
+  box-shadow: 0 8px 30px rgba(25, 27, 30, .08);
+}
