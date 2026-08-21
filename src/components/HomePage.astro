@@ -20,7 +20,7 @@ const profileSchema = {
     name: personName,
     alternateName: ['Anton Nazarov', 'Антон Назаров', 'Antiokh'],
     description: content.meta.description,
-    image: 'https://antiokh.ru/og-image.png',
+    image: 'https://antiokh.ru/portraits/anton-nazarov-belgrade.jpg',
     url: 'https://antiokh.ru/',
     sameAs: [
       'https://github.com/Antiokh',
@@ -29,7 +29,7 @@ const profileSchema = {
   }
 };
 ---
-<script is:inline type="application/ld+json" set:html={JSON.stringify(profileSchema)}></script>
+<script is:inline type="application/ld+json" set:html={JSON.stringify(profileSchema)} />
 <HeroBlock {content} />
 <StoryBlock {content} />
 <ExperienceBlock lang={content.lang} />
