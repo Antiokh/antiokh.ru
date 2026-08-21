@@ -12,6 +12,9 @@
   --line-light: rgba(242, 255, 255, .2);
   --muted: #a9c5ca;
   --muted-light: #d2e3e6;
+  --warm-paper: #9f9588;
+  --warm-ink: #3b000e;
+  --warm-wine: #862b43;
 }
 
 body {
@@ -63,8 +66,55 @@ footer {
   color: var(--muted);
 }
 
-.interest-list span {
-  background: rgba(242, 255, 255, .08);
+/* Warm chapter: beige and wine are taken from the portrait palette. */
+.personal {
+  position: relative;
+  background: var(--warm-paper);
+  color: var(--warm-ink);
+  box-shadow: 0 0 0 100vmax var(--warm-paper);
+  clip-path: inset(0 -100vmax);
+}
+
+.personal .section-label,
+.personal .story-lead,
+.personal-title h2 {
+  color: var(--warm-ink);
+}
+
+.personal-copy > p:not(.story-lead) {
+  color: #4d2630;
+}
+
+.personal-photo {
+  background: #8f8579;
+  box-shadow: 0 14px 42px rgba(59, 0, 14, .18);
+}
+
+.personal .interest-list span {
+  border-color: rgba(59, 0, 14, .22);
+  background: var(--warm-wine);
+  color: #f2ffff;
+}
+
+/* The following identity block flips the warm pair so both directions can be compared in one page. */
+.identity-note {
+  position: relative;
+  background: var(--warm-ink);
+  color: var(--warm-paper);
+  border-top-color: rgba(159, 149, 136, .28);
+  box-shadow: 0 0 0 100vmax var(--warm-ink);
+  clip-path: inset(0 -100vmax);
+}
+
+.identity-note .section-label,
+.identity-note h2,
+.identity-note p,
+.identity-note a {
+  color: var(--warm-paper);
+}
+
+.identity-note a {
+  border-bottom-color: var(--warm-paper);
 }
 
 /* Cyan is the working accent. Red is deliberately reserved for sparse, high-salience marks. */
