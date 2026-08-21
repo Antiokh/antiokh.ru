@@ -126,6 +126,19 @@ button:focus-visible,
   height: 100%;
 }
 
+/* Preview compositions leave room for labels in the lower-left corner. */
+.feature-visual span,
+.serbia-image span {
+  top: auto;
+  bottom: 18px;
+  left: 18px;
+}
+
+.serbia-image span {
+  bottom: 12px;
+  left: 12px;
+}
+
 .feature-visual,
 .case-body img {
   box-shadow: 0 10px 38px rgba(0, 18, 24, .28);
