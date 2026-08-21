@@ -2,19 +2,20 @@
   color-scheme: dark;
   --ink: #f2ffff;
   --paper: #003443;
-  --paper-2: #064553;
-  --paper-3: #0a5260;
+  --paper-2: #003443;
+  --paper-3: #003443;
   --acid: #01ffff;
-  --rust: #ff3b30;
-  --super: #ff3b30;
+  --rust: #01ffff;
+  --super: #01ffff;
   --green: #01ffff;
   --line: rgba(242, 255, 255, .18);
   --line-light: rgba(242, 255, 255, .2);
   --muted: #a9c5ca;
   --muted-light: #d2e3e6;
-  --warm-paper: #9f9588;
-  --warm-ink: #3b000e;
-  --warm-wine: #862b43;
+  --warm-bg: #3b000e;
+  --warm-bg-accent: #862b43;
+  --warm-text: #e4d9cc;
+  --warm-muted: #bfb2a4;
 }
 
 body {
@@ -22,43 +23,36 @@ body {
   color: var(--ink);
 }
 
-/* Keep large surfaces in the same blue-green family as the portfolio previews. */
+/* One blue surface throughout the technical part of the site. */
 .site-header {
   background: color-mix(in srgb, var(--paper) 94%, transparent);
 }
 
 .dark-section,
+footer,
+.serbia-block,
+.serbia-projects article,
+.real-work,
+.needlebit-chapter,
+.bio-card {
+  background: var(--paper);
+}
+
+.dark-section,
 footer {
-  background: #002630;
   color: var(--ink);
+}
+
+footer {
+  border-top: 1px solid var(--line);
 }
 
 .light-link {
   color: var(--ink);
 }
 
-.serbia-block {
-  background: #043b48;
-}
-
 .serbia-projects {
   background: var(--line);
-}
-
-.serbia-projects article {
-  background: #074652;
-}
-
-.real-work {
-  background: var(--paper);
-}
-
-.needlebit-chapter {
-  background: #002630;
-}
-
-.bio-card {
-  background: var(--paper-2);
 }
 
 .prose p,
@@ -66,58 +60,50 @@ footer {
   color: var(--muted);
 }
 
-/* Warm chapter: beige and wine are taken from the portrait palette. */
-.personal {
+/* Warm chapter: red lives only here, never as an accent on the blue sections. */
+.personal,
+.identity-note {
   position: relative;
-  background: var(--warm-paper);
-  color: var(--warm-ink);
-  box-shadow: 0 0 0 100vmax var(--warm-paper);
+  background: var(--warm-bg);
+  color: var(--warm-text);
+  box-shadow: 0 0 0 100vmax var(--warm-bg);
   clip-path: inset(0 -100vmax);
 }
 
 .personal .section-label,
 .personal .story-lead,
-.personal-title h2 {
-  color: var(--warm-ink);
-}
-
-.personal-copy > p:not(.story-lead) {
-  color: #4d2630;
-}
-
-.personal-photo {
-  background: #8f8579;
-  box-shadow: 0 14px 42px rgba(59, 0, 14, .18);
-}
-
-.personal .interest-list span {
-  border-color: rgba(59, 0, 14, .22);
-  background: var(--warm-wine);
-  color: #f2ffff;
-}
-
-/* The following identity block flips the warm pair so both directions can be compared in one page. */
-.identity-note {
-  position: relative;
-  background: var(--warm-ink);
-  color: var(--warm-paper);
-  border-top-color: rgba(159, 149, 136, .28);
-  box-shadow: 0 0 0 100vmax var(--warm-ink);
-  clip-path: inset(0 -100vmax);
-}
-
+.personal-title h2,
 .identity-note .section-label,
 .identity-note h2,
 .identity-note p,
 .identity-note a {
-  color: var(--warm-paper);
+  color: var(--warm-text);
+}
+
+.personal-copy > p:not(.story-lead) {
+  color: var(--warm-muted);
+}
+
+.personal-photo {
+  background: #9f9588;
+  box-shadow: 0 14px 42px rgba(15, 0, 4, .34);
+}
+
+.personal .interest-list span {
+  border-color: rgba(228, 217, 204, .28);
+  background: var(--warm-bg-accent);
+  color: var(--warm-text);
+}
+
+.identity-note {
+  border-top-color: rgba(228, 217, 204, .24);
 }
 
 .identity-note a {
-  border-bottom-color: var(--warm-paper);
+  border-bottom-color: var(--warm-text);
 }
 
-/* Cyan is the working accent. Red is deliberately reserved for sparse, high-salience marks. */
+/* Cyan is the only accent on blue. */
 .wordmark > span:first-child,
 .feature-visual span,
 .button.acid {
@@ -151,7 +137,7 @@ footer {
 a:focus-visible,
 button:focus-visible,
 .experience-item summary:focus-visible {
-  outline-color: var(--super);
+  outline-color: var(--acid);
 }
 
 /* Portfolio assets are authored as 4:3. Preserve that frame instead of cropping them to ad-hoc heights. */
@@ -168,7 +154,7 @@ button:focus-visible,
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: var(--paper-3);
+  background: var(--paper);
 }
 
 .feature-visual img,
@@ -195,7 +181,7 @@ button:focus-visible,
 }
 
 .portrait {
-  background: var(--paper-3);
+  background: var(--paper);
   box-shadow: 0 16px 50px rgba(0, 18, 24, .32);
 }
 
@@ -204,5 +190,5 @@ button:focus-visible,
 }
 
 .bio-portrait {
-  background: var(--paper-3);
+  background: var(--paper);
 }
