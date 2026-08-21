@@ -14,8 +14,8 @@
   --muted-light: #d2e3e6;
   --warm-bg: #3b000e;
   --warm-bg-accent: #862b43;
-  --warm-text: #e4d9cc;
-  --warm-muted: #bfb2a4;
+  --warm-text: #f1e7dc;
+  --warm-muted: #cdbfb0;
 }
 
 body {
@@ -23,36 +23,35 @@ body {
   color: var(--ink);
 }
 
-/* One blue surface throughout the technical part of the site. */
+/* One blue surface throughout the cold/technical sections. */
 .site-header {
-  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  background: color-mix(in srgb, #003443 94%, transparent);
 }
 
 .dark-section,
 footer,
 .serbia-block,
-.serbia-projects article,
-.real-work,
-.needlebit-chapter,
-.bio-card {
-  background: var(--paper);
-}
-
-.dark-section,
-footer {
-  color: var(--ink);
+.voices,
+.personal-contact {
+  background: #003443;
+  color: #f2ffff;
 }
 
 footer {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(242, 255, 255, .18);
 }
 
 .light-link {
-  color: var(--ink);
+  color: inherit;
 }
 
 .serbia-projects {
-  background: var(--line);
+  background: rgba(242, 255, 255, .18);
+}
+
+.serbia-projects article,
+.bio-card {
+  background: #003443;
 }
 
 .prose p,
@@ -60,19 +59,84 @@ footer {
   color: var(--muted);
 }
 
-/* Warm chapter: red lives only here, never as an accent on the blue sections. */
-.personal,
+/*
+  Homepage rhythm: warm / cold / warm / cold.
+  Warm sections locally swap the semantic colour variables, so component styles
+  keep their hierarchy without introducing a second blue or red-on-blue accents.
+*/
+.portrait-hero,
+.story,
+.experience-section,
+.real-work,
+.needlebit-chapter,
 .identity-note {
+  --ink: var(--warm-text);
+  --paper: var(--warm-bg);
+  --paper-2: var(--warm-bg);
+  --paper-3: var(--warm-bg-accent);
+  --acid: var(--warm-text);
+  --rust: var(--warm-text);
+  --super: var(--warm-text);
+  --green: var(--warm-text);
+  --line: rgba(241, 231, 220, .22);
+  --line-light: rgba(241, 231, 220, .24);
+  --muted: var(--warm-muted);
+  --muted-light: #ded1c4;
   position: relative;
   background: var(--warm-bg);
   color: var(--warm-text);
+}
+
+/* .wrap sections need their colour to run edge-to-edge. */
+.portrait-hero,
+.story,
+.experience-section,
+.identity-note {
   box-shadow: 0 0 0 100vmax var(--warm-bg);
   clip-path: inset(0 -100vmax);
 }
 
-.personal .section-label,
-.personal .story-lead,
-.personal-title h2,
+.real-work,
+.needlebit-chapter {
+  background: var(--warm-bg);
+}
+
+/* Cold sections between warm chapters. */
+.manifesto,
+.numbers,
+.serbia-block,
+.voices,
+.personal,
+.personal-contact {
+  background: #003443;
+  color: #f2ffff;
+}
+
+.personal {
+  position: relative;
+  box-shadow: 0 0 0 100vmax #003443;
+  clip-path: inset(0 -100vmax);
+}
+
+.personal-copy > p:not(.story-lead) {
+  color: #a9c5ca;
+}
+
+.personal-photo {
+  background: #9f9588;
+  box-shadow: 0 14px 42px rgba(0, 18, 24, .28);
+}
+
+.personal .interest-list span {
+  border-color: rgba(242, 255, 255, .2);
+  background: transparent;
+  color: #f2ffff;
+}
+
+.identity-note {
+  border-top-color: rgba(241, 231, 220, .22);
+}
+
 .identity-note .section-label,
 .identity-note h2,
 .identity-note p,
@@ -80,67 +144,68 @@ footer {
   color: var(--warm-text);
 }
 
-.personal-copy > p:not(.story-lead) {
-  color: var(--warm-muted);
-}
-
-.personal-photo {
-  background: #9f9588;
-  box-shadow: 0 14px 42px rgba(15, 0, 4, .34);
-}
-
-.personal .interest-list span {
-  border-color: rgba(228, 217, 204, .28);
-  background: var(--warm-bg-accent);
-  color: var(--warm-text);
-}
-
-.identity-note {
-  border-top-color: rgba(228, 217, 204, .24);
-}
-
 .identity-note a {
   border-bottom-color: var(--warm-text);
 }
 
+/* Warm hero and NeedleBit controls stay inside the wine/beige palette. */
+.portrait-hero .status-dot {
+  background: var(--warm-text);
+  box-shadow: 0 0 0 3px rgba(241, 231, 220, .12);
+}
+
+.portrait-hero .button.solid,
+.needlebit-chapter .button.acid {
+  background: var(--warm-text);
+  color: var(--warm-bg);
+  border-color: var(--warm-text);
+}
+
+.needlebit-chapter .light-link {
+  color: var(--warm-text);
+}
+
 /* Cyan is the only accent on blue. */
 .wordmark > span:first-child,
-.feature-visual span,
 .button.acid {
-  background: var(--acid);
-  color: #002d38;
-  border-color: var(--acid);
+  background: #01ffff;
+  color: #003443;
+  border-color: #01ffff;
+}
+
+.status-dot {
+  background: #01ffff;
+  box-shadow: 0 0 0 3px rgba(1, 255, 255, .12);
+}
+
+.button.solid {
+  background: #f2ffff;
+  color: #003443;
+  border-color: #f2ffff;
 }
 
 .personal-contact {
-  background: var(--acid);
-  color: #002d38;
+  color: #f2ffff;
+  border-top: 1px solid rgba(242, 255, 255, .18);
 }
 
 .personal-contact h2,
 .personal-contact a,
 .personal-contact .section-label {
-  color: #002d38;
+  color: #f2ffff;
 }
 
-.status-dot {
-  background: var(--acid);
-  box-shadow: 0 0 0 3px rgba(1, 255, 255, .12);
-}
-
-.button.solid {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
+.personal-contact a {
+  border-bottom-color: #01ffff;
 }
 
 a:focus-visible,
 button:focus-visible,
 .experience-item summary:focus-visible {
-  outline-color: var(--acid);
+  outline-color: #01ffff;
 }
 
-/* Portfolio assets are authored as 4:3. Preserve that frame instead of cropping them to ad-hoc heights. */
+/* Portfolio assets are authored as 4:3. */
 .feature-visual,
 .serbia-image {
   aspect-ratio: 4 / 3;
@@ -154,7 +219,7 @@ button:focus-visible,
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: var(--paper);
+  background: #003443;
 }
 
 .feature-visual img,
@@ -162,17 +227,23 @@ button:focus-visible,
   height: 100%;
 }
 
-/* Preview compositions leave room for labels in the lower-left corner. */
+/* All preview labels use one treatment and the least occupied corner. */
 .feature-visual span,
 .serbia-image span {
-  top: auto;
-  bottom: 18px;
-  left: 18px;
+  top: 18px;
+  right: 18px;
+  bottom: auto;
+  left: auto;
+  background: #003443;
+  color: #01ffff;
+  border: 1px solid rgba(1, 255, 255, .7);
 }
 
 .serbia-image span {
-  bottom: 12px;
-  left: 12px;
+  top: 12px;
+  right: 12px;
+  bottom: auto;
+  left: auto;
 }
 
 .feature-visual,
@@ -181,14 +252,14 @@ button:focus-visible,
 }
 
 .portrait {
-  background: var(--paper);
+  background: var(--paper-3);
   box-shadow: 0 16px 50px rgba(0, 18, 24, .32);
 }
 
 .portrait:after {
-  border-color: rgba(1, 255, 255, .32);
+  border-color: rgba(241, 231, 220, .3);
 }
 
 .bio-portrait {
-  background: var(--paper);
+  background: #003443;
 }
