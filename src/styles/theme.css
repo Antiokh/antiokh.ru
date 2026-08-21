@@ -59,11 +59,7 @@ footer {
   color: var(--muted);
 }
 
-/*
-  Homepage rhythm: warm / cold / warm / cold.
-  Warm sections locally swap the semantic colour variables, so component styles
-  keep their hierarchy without introducing a second blue or red-on-blue accents.
-*/
+/* Homepage rhythm: warm / cold / warm / cold. */
 .portrait-hero,
 .story,
 .experience-section,
@@ -227,23 +223,22 @@ button:focus-visible,
   height: 100%;
 }
 
-/* All preview labels use one treatment and the least occupied corner. */
+/* One badge design for every preview: dark blue, cyan text, upper-right. */
 .feature-visual span,
 .serbia-image span {
-  top: 18px;
-  right: 18px;
+  top: 16px;
+  right: 16px;
   bottom: auto;
   left: auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
   background: #003443;
   color: #01ffff;
-  border: 1px solid rgba(1, 255, 255, .7);
-}
-
-.serbia-image span {
-  top: 12px;
-  right: 12px;
-  bottom: auto;
-  left: auto;
+  border: 1px solid rgba(1, 255, 255, .72);
+  font: 600 11px/1 var(--sans);
 }
 
 .feature-visual,
