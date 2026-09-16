@@ -2,7 +2,9 @@
   color-scheme: dark;
   --color-1: #003443;
   --color-2: #430F00;
-  --ink: #f2ffff;
+  --text-1: #EBF7FF;
+  --text-2: #FFF3EB;
+  --ink: var(--text-1);
   --paper: var(--color-1);
   --paper-2: var(--color-1);
   --paper-3: var(--color-1);
@@ -10,14 +12,14 @@
   --rust: #01ffff;
   --super: #01ffff;
   --green: #01ffff;
-  --line: rgba(242, 255, 255, .18);
-  --line-light: rgba(242, 255, 255, .2);
-  --muted: #a9c5ca;
-  --muted-light: #d2e3e6;
+  --line: color-mix(in srgb, var(--text-1) 18%, transparent);
+  --line-light: color-mix(in srgb, var(--text-1) 20%, transparent);
+  --muted: color-mix(in srgb, var(--text-1) 70%, var(--color-1) 30%);
+  --muted-light: color-mix(in srgb, var(--text-1) 86%, var(--color-1) 14%);
   --warm-bg: var(--color-2);
-  --warm-bg-accent: color-mix(in srgb, var(--color-2) 70%, var(--warm-text) 30%);
-  --warm-text: #f1e7dc;
-  --warm-muted: #cdbfb0;
+  --warm-bg-accent: color-mix(in srgb, var(--color-2) 70%, var(--text-2) 30%);
+  --warm-text: var(--text-2);
+  --warm-muted: color-mix(in srgb, var(--text-2) 72%, var(--color-2) 28%);
 }
 
 body {
@@ -36,11 +38,11 @@ footer,
 .voices,
 .personal-contact {
   background: var(--color-1);
-  color: #f2ffff;
+  color: var(--text-1);
 }
 
 footer {
-  border-top: 1px solid rgba(242, 255, 255, .18);
+  border-top: 1px solid var(--line);
 }
 
 .light-link {
@@ -48,7 +50,7 @@ footer {
 }
 
 .serbia-projects {
-  background: rgba(242, 255, 255, .18);
+  background: var(--line);
 }
 
 .serbia-projects article,
@@ -76,10 +78,10 @@ footer {
   --rust: var(--warm-text);
   --super: var(--warm-text);
   --green: var(--warm-text);
-  --line: rgba(241, 231, 220, .22);
-  --line-light: rgba(241, 231, 220, .24);
+  --line: color-mix(in srgb, var(--warm-text) 22%, transparent);
+  --line-light: color-mix(in srgb, var(--warm-text) 24%, transparent);
   --muted: var(--warm-muted);
-  --muted-light: #ded1c4;
+  --muted-light: color-mix(in srgb, var(--warm-text) 86%, var(--warm-bg) 14%);
   position: relative;
   background: var(--warm-bg);
   color: var(--warm-text);
@@ -107,7 +109,7 @@ footer {
 .personal,
 .personal-contact {
   background: var(--color-1);
-  color: #f2ffff;
+  color: var(--text-1);
 }
 
 .personal {
@@ -117,7 +119,7 @@ footer {
 }
 
 .personal-copy > p:not(.story-lead) {
-  color: #a9c5ca;
+  color: var(--muted);
 }
 
 .personal-photo {
@@ -126,13 +128,13 @@ footer {
 }
 
 .personal .interest-list span {
-  border-color: rgba(242, 255, 255, .2);
+  border-color: var(--line-light);
   background: transparent;
-  color: #f2ffff;
+  color: var(--text-1);
 }
 
 .identity-note {
-  border-top-color: rgba(241, 231, 220, .22);
+  border-top-color: var(--line);
 }
 
 .identity-note .section-label,
@@ -149,7 +151,7 @@ footer {
 /* Warm hero and NeedleBit controls stay inside the brown/beige palette. */
 .portrait-hero .status-dot {
   background: var(--warm-text);
-  box-shadow: 0 0 0 3px rgba(241, 231, 220, .12);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--warm-text) 12%, transparent);
 }
 
 .portrait-hero .button.solid,
@@ -177,20 +179,20 @@ footer {
 }
 
 .button.solid {
-  background: #f2ffff;
+  background: var(--text-1);
   color: var(--color-1);
-  border-color: #f2ffff;
+  border-color: var(--text-1);
 }
 
 .personal-contact {
-  color: #f2ffff;
-  border-top: 1px solid rgba(242, 255, 255, .18);
+  color: var(--text-1);
+  border-top: 1px solid var(--line);
 }
 
 .personal-contact h2,
 .personal-contact a,
 .personal-contact .section-label {
-  color: #f2ffff;
+  color: var(--text-1);
 }
 
 .personal-contact a {
@@ -254,7 +256,7 @@ button:focus-visible,
 }
 
 .portrait:after {
-  border-color: rgba(241, 231, 220, .3);
+  border-color: color-mix(in srgb, var(--warm-text) 30%, transparent);
 }
 
 .bio-portrait {
