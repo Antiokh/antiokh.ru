@@ -1,9 +1,11 @@
 :root {
   color-scheme: dark;
+  --color-1: #003443;
+  --color-2: #430F00;
   --ink: #f2ffff;
-  --paper: #003443;
-  --paper-2: #003443;
-  --paper-3: #003443;
+  --paper: var(--color-1);
+  --paper-2: var(--color-1);
+  --paper-3: var(--color-1);
   --acid: #01ffff;
   --rust: #01ffff;
   --super: #01ffff;
@@ -12,8 +14,8 @@
   --line-light: rgba(242, 255, 255, .2);
   --muted: #a9c5ca;
   --muted-light: #d2e3e6;
-  --warm-bg: #3b000e;
-  --warm-bg-accent: #862b43;
+  --warm-bg: var(--color-2);
+  --warm-bg-accent: color-mix(in srgb, var(--color-2) 70%, var(--warm-text) 30%);
   --warm-text: #f1e7dc;
   --warm-muted: #cdbfb0;
 }
@@ -25,7 +27,7 @@ body {
 
 /* One blue surface throughout the cold/technical sections. */
 .site-header {
-  background: color-mix(in srgb, #003443 94%, transparent);
+  background: color-mix(in srgb, var(--color-1) 94%, transparent);
 }
 
 .dark-section,
@@ -33,7 +35,7 @@ footer,
 .serbia-block,
 .voices,
 .personal-contact {
-  background: #003443;
+  background: var(--color-1);
   color: #f2ffff;
 }
 
@@ -51,7 +53,7 @@ footer {
 
 .serbia-projects article,
 .bio-card {
-  background: #003443;
+  background: var(--color-1);
 }
 
 .prose p,
@@ -104,13 +106,13 @@ footer {
 .voices,
 .personal,
 .personal-contact {
-  background: #003443;
+  background: var(--color-1);
   color: #f2ffff;
 }
 
 .personal {
   position: relative;
-  box-shadow: 0 0 0 100vmax #003443;
+  box-shadow: 0 0 0 100vmax var(--color-1);
   clip-path: inset(0 -100vmax);
 }
 
@@ -144,7 +146,7 @@ footer {
   border-bottom-color: var(--warm-text);
 }
 
-/* Warm hero and NeedleBit controls stay inside the wine/beige palette. */
+/* Warm hero and NeedleBit controls stay inside the brown/beige palette. */
 .portrait-hero .status-dot {
   background: var(--warm-text);
   box-shadow: 0 0 0 3px rgba(241, 231, 220, .12);
@@ -165,7 +167,7 @@ footer {
 .wordmark > span:first-child,
 .button.acid {
   background: #01ffff;
-  color: #003443;
+  color: var(--color-1);
   border-color: #01ffff;
 }
 
@@ -176,7 +178,7 @@ footer {
 
 .button.solid {
   background: #f2ffff;
-  color: #003443;
+  color: var(--color-1);
   border-color: #f2ffff;
 }
 
@@ -215,7 +217,7 @@ button:focus-visible,
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: #003443;
+  background: var(--color-1);
 }
 
 .feature-visual img,
@@ -235,7 +237,7 @@ button:focus-visible,
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #003443;
+  background: var(--color-1);
   color: #01ffff;
   border: 1px solid rgba(1, 255, 255, .72);
   font: 600 11px/1 var(--sans);
@@ -256,5 +258,5 @@ button:focus-visible,
 }
 
 .bio-portrait {
-  background: #003443;
+  background: var(--color-1);
 }
