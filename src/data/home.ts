@@ -26,9 +26,9 @@ const sharedCases = {
       title: 'AIS MosRazvitie',
       tag: 'GovTech · сеть из 100+ учреждений',
       image: '/projects/mosrazvitie.png',
-      lead: 'Главная сложность была в том, чтобы свести к одной системе разные процессы, термины и интересы подразделений.',
-      text: 'Система уже много лет работала и успела обрасти собственной логикой. Вместе с подразделениями я уточнял сущности и термины, перестраивал модель данных и доступов, делал отчётность, обучал пользователей и отвечал за эксплуатацию. Постепенно она стала нормальным рабочим источником данных.',
-      proof: 'архитектура · анализ · разработка · внедрение · эксплуатация'
+      lead: 'Отраслевая система для 100+ учреждений стала рабочим источником данных для планирования и финансирования, а не просто местом для отчётности.',
+      text: 'Я перестроил модель данных и прав вокруг реальных связей между учреждениями, зданиями, мероприятиями и сотрудниками, добавил контроль свежести данных, RBAC, полный цикл мероприятий и self-service отчётность. Один тяжёлый отчёт по мероприятиям, который раньше строился около пяти часов, после переработки формировался примерно за 1,5 секунды — 1,5 минуты в зависимости от сложности.',
+      proof: 'product ownership · архитектура · data governance · внедрение'
     },
     {
       id: 'andronyevskaya',
@@ -68,9 +68,9 @@ const sharedCases = {
       title: 'AIS MosRazvitie',
       tag: 'GovTech · network of 100+ institutions',
       image: '/projects/mosrazvitie.png',
-      lead: 'The hardest part was not negotiating with code. It was negotiating with reality.',
-      text: 'The industry platform was already alive and carrying years of legacy. I worked through entities and terminology with departments, rebuilt data and access logic, developed reporting tools, trained users, handled operations, and gradually turned the system into a usable source of operational data.',
-      proof: 'architecture · analysis · development · adoption · operations'
+      lead: 'A sector platform for 100+ institutions became working management infrastructure used for planning and funding, not merely a reporting portal.',
+      text: 'I rebuilt the data and access model around the real relationships between institutions, buildings, events, and staff, added data-freshness controls, RBAC, a full event lifecycle, and self-service reporting. One heavy events report that used to take about five hours was reduced to roughly 1.5 seconds–1.5 minutes depending on complexity.',
+      proof: 'product ownership · architecture · data governance · adoption'
     },
     {
       id: 'andronyevskaya',
@@ -169,10 +169,10 @@ export const home: Record<Locale, HomeContent> = {
       }
     ],
     metrics: [
-      { value: '18', label: 'лет профессиональной работы в IT' },
-      { value: '100+', label: 'учреждений в одной отраслевой системе' },
-      { value: '100+', label: 'сотрудников переведены на удалёнку в пандемию' },
-      { value: '≈70 000', label: 'исторических отчётов перенесено в одном из последних проектов' }
+      { value: '≈₽22 млн', label: 'оценённые затраты, которых удалось избежать на замене техники и лицензировании в ЗИЛе' },
+      { value: '5 ч → 1,5 с–1,5 мин', label: 'крупный отчёт по мероприятиям после переработки MosRazvitie' },
+      { value: '300–600 → ≈150', label: 'заявок в месяц после перестройки IT-сервиса ЗИЛа' },
+      { value: '≈10×', label: 'рост выручки Dobri Visarun после автоматизации' }
     ],
     serbia: {
       label: 'Белград / 2022—сейчас',
@@ -332,10 +332,10 @@ home.en = {
     }
   ],
   metrics: [
-    { value: '18', label: 'years working professionally in IT' },
-    { value: '100+', label: 'institutions connected through one industry platform' },
-    { value: '100+', label: 'employees moved to remote work during the pandemic' },
-    { value: '~70,000', label: 'historical reports migrated in one recent project' }
+    { value: '≈RUB 22m', label: 'estimated technology cost avoided through lifecycle extension and licensing decisions at ZIL' },
+    { value: '5h → 1.5s–1.5m', label: 'one major events report after the MosRazvitie reporting redesign' },
+    { value: '300–600 → ~150', label: 'monthly IT requests after rebuilding ZIL’s service model' },
+    { value: '~10×', label: 'Dobri Visarun revenue growth after operational automation' }
   ],
   serbia: {
     label: 'Belgrade / 2022—now',
